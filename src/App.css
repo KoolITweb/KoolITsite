@@ -1,0 +1,171 @@
+.header-color {
+	background: #40E0D0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* homePage css*/
+
+.landing-grid {
+	background: #40E0D0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.projects-grid{
+	background: #40E0D0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align: center;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.projectTabs{
+	background: #40E0D0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align: center;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+}
+
+.koolit-avatar {
+    width: 20%;
+    height: auto;
+    overflow: hidden;
+    //border: 5px solid black;
+    border-radius: 150px;
+    object-fit: cover;
+    margin-top: 5em;
+    box-shadow: 0px 10px 18px 10px rgba(0,0,0,5);
+}
+
+.koolit-banner {
+	background-color: black;
+    width: 80%;
+	opacity: .8;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.koolit-banner h1 {
+	font-size: 65px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.koolit-banner hr {
+	border-top: 5px dotted white;
+	width: 50%;
+	margin: auto;
+}
+
+.koolit-banner p {
+ 	font-size: 20px;
+ 	color: white;
+ 	padding-top: 1em;
+ 	text-align: center;
+}
+
+.social-links {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	margin: auto
+}
+
+.social-links i{
+	color: white;
+	font-size: 5em;
+	padding: 8px;
+	font-weight: bold;
+}
+
+/* projectsPage css */
+
+.projects-grid {
+	display: grid;
+  	grid-template-columns: repeat(3, auto);
+  	align-self: center;
+}
+
+.projects-card{
+	margin: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	align-self: center;
+	minWidth: 25%;
+}
+
+/* Resume Page css */
+.resume-right-col {
+  background: #27221F;
+  color: white;
+  padding: 2em;
+}
+
+/* contact page css */
+
+.contact-body {
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.contact-grid {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  height: 550px;
+  background: white;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-grid h2 {
+  font-family: 'Anton', sans-serif;
+}
+
+.contact-grid p {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+}
+
+.contact-grid hr {
+  border-top: 5px dotted black;
+  width: 50%;
+  margin: auto;
+}
+
+.contact-list i {
+  font-size: 66px;
+  padding-right: 5rem;
+}
+
+/* about page */
+.subtopic {
+margin:10px 10px 30px 10px !important;
+}
+
+.subtopic p {
+font-size: var(--fontsize-p);
+margin: 10px;
+}
+
+.subtopic h1,h2,h3,h4,p{
+margin: 10px;
+}
