@@ -16,7 +16,7 @@ class Landing extends Component{
 						/>
 
 						<div className='koolit-banner'>
-							<h1>Software Quality</h1>
+							<h1>QA Engineer</h1>
 							<hr/>
 							<p>Test Automation | Quality Process | Software Testing</p>
 						<div className="social-links">
@@ -33,7 +33,9 @@ class Landing extends Component{
 
 							{/* PPC */}
 							<a href="http://google.com" rel="noopener noreferrer" target="_blank">
-								<i className="fa fa-sitemap" aria-hidden="true">PPC</i>
+								<i className="fa fa-globe" aria-hidden="true">
+									<a style={{ fontSize:'20px', color: 'white', fontWeight: 'bold' }}> PPC</a>
+								</i>
 							</a>
 
 						</div>
