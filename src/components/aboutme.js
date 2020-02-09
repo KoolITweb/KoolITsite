@@ -1,25 +1,42 @@
 import React, { Component } from 'react';
+import { withNamespaces } from 'react-i18next';
 
 class About extends Component {
 	render() {
+
+	    const { t } = this.props;
+
 		return (
-			<div className="condiv">
-				<h1 className="subtopic">About Me</h1>
-				<h4>Hey there,</h4>
-				<h1>I'm Abdul Wahid Naafi</h1>
-				<h3>Full Stack Web <u>Developer</u> | UI/UX <u>Designer</u></h3>
-				<br></br>
-				<p>I started my journey in the world of computers from an young age,
-				now I’m 20 years old, Pursuing my Software Engineering Degree in
-				VIT University Vellore.  Web development is my center of interest, i always
-				love the idea of cross-platform development, 1-n one code base deploy into almost
-				any platform, which web technology like Javascript enables me to do. I also like
-				creating Interactive UI components for better UX  and share those desgin and codes
-				to the world through Github, Codepen and Instagram.
-				</p>
-			</div>
+
+<div class="container">
+  <div class="box">
+    <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227192745/Skier.jpg"/>
+    <span>Skiing</span>
+  </div>
+  <div class="box">
+    <img src="https://thegreyalley.com/wp-content/uploads/2018/06/Football-Turfs-Banner.jpg"/>
+    <span>Football</span>
+  </div>
+  <div class="box">
+    <img src="https://cdn.images.express.co.uk/img/dynamic/59/590x/watch-tour-de-france-691467.jpg"/>
+    <span>Cycling</span>
+  </div>
+  <div class="box">
+    <img src="https://hetwapenvanwesepe.nl/wp-content/uploads/2018/03/pubquiz-profielfoto-bresactiviteiten.nl_.jpg"/>
+    <span>Pub quiz</span>
+  </div>
+    <div class="box">
+      <img src="https://redgrapevine.com.au/wp-content/uploads/sites/15/2018/11/australian-cuisines.png"/>
+      <span>Food</span>
+    </div>
+    <div class="box">
+      <img src="https://www.wearencc.com/wp-content/uploads/2018/10/MindGames-518x294.jpg"/>
+      <span>Mind games</span>
+    </div>
+</div>
+
 		)
 	}
 }
 
-export default About
+export default withNamespaces()(About);

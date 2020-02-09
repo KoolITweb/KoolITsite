@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import { Grid, Cell } from 'react-mdl'
+import { Grid, Cell } from 'react-mdl';
+import { withNamespaces } from 'react-i18next';
 
 class Landing extends Component{
 	render() {
+
+	    const { t } = this.props;
+
 		return (
 			<div style={{width: '100%'}}>
 				<Grid className='landing-grid'>
@@ -14,9 +18,8 @@ class Landing extends Component{
 							alt="avatar"
 							className="koolit-avatar"
 						/>
-
 						<div className='koolit-banner'>
-							<h1>QA Engineer</h1>
+							<h1>{t('main_function')}</h1>
 							<hr/>
 							<p>Test Automation | Quality Process | Software Testing</p>
 						<div className="social-links">
@@ -47,4 +50,4 @@ class Landing extends Component{
 	}
 }
 
-export default Landing;
+export default withNamespaces()(Landing);

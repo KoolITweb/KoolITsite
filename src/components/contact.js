@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
+import { withNamespaces } from 'react-i18next';
 
 
 class Contact extends Component {
   render() {
+
+    const { t } = this.props;
+
     return(
       <div className="contact-body">
         <Grid className="contact-grid">
@@ -26,7 +30,7 @@ class Contact extends Component {
                 <ListItem>
                   <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
                     <i className="fa fa-phone-square" aria-hidden="true"/>
-                    123456-7890
+                      {t('contact_phone')}
                   </ListItemContent>
                 </ListItem>
 
@@ -61,4 +65,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default withNamespaces()(Contact);

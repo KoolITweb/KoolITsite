@@ -3,40 +3,43 @@ import { Grid, Cell } from 'react-mdl';
 import Education from './education';
 import Experience from './experience';
 import Skills from './skills';
+import { withNamespaces } from 'react-i18next';
 
 
 class Resume extends Component {
   render() {
+
+	const { t } = this.props;
+
     return(
       <div>
         <Grid>
           <Cell col={4}>
-            <div style={{textAlign: 'center'}}>
+            <div style={{textAlign: 'left' }}>
               <img
-                src="https://res.cloudinary.com/dtxq9wbbg/avatars/avatars-v4/v4_avatar-30.png"
+                src="https://media-exp1.licdn.com/dms/image/C4D03AQElnTL_5st7Ig/profile-displayphoto-shrink_200_200/0?e=1586390400&v=beta&t=GDRDUZ2O2dqgBwkInRmK2Txe61p6KYV-iKLMFjFMPQU"
                 alt="avatar"
-                style={{height: '200px'}}
+                style={{height: '350px', borderRadius: '10px' }}
                  />
             </div>
 
-            <h2 style={{paddingTop: '2em'}}>Daan Koolman</h2>
+            <h2 style={{paddingTop: '.5em'}}>Daan Koolman</h2>
             <h4 style={{color: 'grey'}}>QA Engineer</h4>
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            <p>PROFILE INFO</p>
+           	 <p>PROFILE INFO</p>
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
             <h5>Address</h5>
-            <p>Amsterdam</p>
+          	  <p>Amsterdam</p>
             <h5>Phone</h5>
-            <p>123456-7890</p>
+        	    <p>123456-7890</p>
             <h5>Email</h5>
-            <p>daan@koolit.nl</p>
+       	     <p>daan@koolit.nl</p>
             <h5>Web</h5>
-            <p>mywebsite.com</p>
+       	     <p>mywebsite.com</p>
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
           </Cell>
           <Cell className="resume-right-col" col={8}>
             <h2>Education</h2>
-
 
             <Education
               startYear={2002}
@@ -95,4 +98,4 @@ class Resume extends Component {
   }
 }
 
-export default Resume;
+export default withNamespaces()(Resume);
