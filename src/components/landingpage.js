@@ -8,9 +8,15 @@ class Landing extends Component{
 	    const { t } = this.props;
 
 		return (
-			<div style={{width: '100%'}}>
+		<div class="background-containers" style={{width: '100%'}}>
+
 				<Grid className='landing-grid'>
+
 					<Cell col={12}>
+						<img className="moon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""/>
+                    	<div class="stars"></div>
+                        <div class="twinkling"></div>
+                        <div class="clouds"></div>
 						<img
 							//src="https://image.freepik.com/vrije-vector/programmatool-van-softwaretaal_24877-763.jpg"
 							//src="https://media-exp1.licdn.com/dms/image/C4E0BAQFYY0NadTysuw/company-logo_200_200/0?e=1588809600&v=beta&t=Pz2VxHQUqeq6AuoSVzILABelw0HbwCZzaudtwDvcXVg"
@@ -45,6 +51,7 @@ class Landing extends Component{
 						</div>
 					</Cell>
 				</Grid>
+
 			</div>
 		)
 	}
