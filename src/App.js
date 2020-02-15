@@ -21,6 +21,7 @@ function App({ t }) {
                 <Link to="/projects">{t('menu_projects')}</Link>
                 <Link to="/contact">{t('menu_contact')}</Link>
                 <Link to="/test-page">{t('menu_test')}</Link>
+                <Link to="/ppc">PPC</Link>
                 <button onClick={() => changeLanguage('nl')}>nl</button>
                 <button onClick={() => changeLanguage('en')}>en</button>
             </Navigation>
@@ -33,6 +34,7 @@ function App({ t }) {
                 <Link to="/projects">Projects</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to="/test-page">Test-page</Link>
+                <Link to="/ppc">PPC</Link>
             </Navigation>
         </Drawer>
         <Content>

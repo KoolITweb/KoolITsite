@@ -1,263 +1,288 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton,Dialog, DialogTitle, DialogContent, DialogActions } from 'react-mdl';
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemHeading,
-    AccordionItemButton,
-    AccordionItemPanel,
-    AccordionItemState
-} from 'react-accessible-accordion';
 import { withNamespaces } from 'react-i18next';
 
-
 class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.handleOpenDialog = this.handleOpenDialog.bind(this);
-    this.handleCloseDialog = this.handleCloseDialog.bind(this);
+
+
+openGallery (id) {
+  this.closeAll();
+  var gallery = document.getElementById('gallery-' + id);
+  var card = document.getElementById('card-' + id);
+  gallery.classList.add('Gallery--active');
+  card.classList.add('Card--active');
+}
+
+closeAll () {
+  var galleryActv = document.querySelector('.Gallery--active');
+  var cardActv = document.querySelector('.Card--active');
+
+  if (galleryActv) {
+    galleryActv.classList.remove('Gallery--active');
   }
 
-  handleOpenDialog() {
-    this.setState({
-      openDialog: true
-    });
+  if (cardActv) {
+    cardActv.classList.remove('Card--active');
   }
-
-  handleCloseDialog() {
-    this.setState({
-      openDialog: false
-    });
-  }
+}
 
   render() {
 
   	  const { t } = this.props;
 
       return(
-        <div className="projects-grid">
-          {/* Project 1 */}
-          <Card className="projects-card" shadow={5} style={{ width: '80%', margin: '10% 10%'}}>
-            <CardTitle style={{ height: '150px', background: 'url(https://radar.avrotros.nl/fileadmin/user_upload/rabobank-reactie-23-09-2019.jpg) center / 100%'}} ></CardTitle>
+<div className="projects">
+<section class="Grid">
+    <div class="Grid-row">
+        <a class="Card" onClick={() => this.openGallery(1)} id="card-1">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://radar.avrotros.nl/fileadmin/user_upload/rabobank-reactie-23-09-2019.jpg)"}}></div>
+            </div>
+            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-explore"><span> Project details and activities</span></div>
+            <button class="Card-button">Click here</button></a>
+        <a class="Card" onClick={() => this.openGallery(2)} id="card-2">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://sollicitatieblog.nl/wp-content/uploads/2019/04/ahold-delhaize-logo.png)"}}></div>
+            </div>
+            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-explore"><span> Project details and activities</span></div>
+            <button class="Card-button">Click here</button></a>
+        <a class="Card" onClick={() => this.openGallery(3)} id="card-3">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://www.reybex.com/wp-content/uploads/2019/07/fedex_reybex_schnittstelle.gif)"}}></div>
+            </div>
+            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-explore"><span>Project details and activities</span></div>
+            <button class="Card-button">Click here</button></a>
+    </div>
+    <div class="Grid-row">
+       <a class="Card" onClick={() => this.openGallery(4)} id="card-4">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://sc02.alicdn.com/kf/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ/936445268/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ.jpg)"}}></div>
+            </div>
+            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-explore"><span>Project details and activities</span></div><button class="Card-button">Click here</button></a>
+       <a class="Card" onClick={() => this.openGallery(5)} id="card-5">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://www.freshersopenings.in/wp-content/uploads/2016/11/Ranstad-logo.gif)"}}></div>
+            </div>
+            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-explore"><span>Project details and activities</span></div><button class="Card-button">Click here</button></a>
+       <a class="Card" onClick={() => this.openGallery(6)} id="card-6">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://www.expertdoc.nl/wp-content/uploads/logo_DJI_MvVenJ-witruimte.jpg)"}}></div>
+            </div>
+            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-explore"><span> Project details and activities</span></div><button class="Card-button">Click here</button></a>
+    </div>
+</section>
+<section class="Gallery" id="gallery-1" onClick={() => this.closeAll()}>
+    <div class="Gallery-header">
+      <a class="Gallery-close" onClick={() => this.closeAll()}>×</a></div>
+  <div><h1>Stream in Milan</h1></div>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image"><p>TEXT1</p></div>
+            <div class="Gallery-image"><p>TEXT2</p></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.rabobank.nl/images/huis%20waarde%20rgb%20tr2_291051499.svg)"}}></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+</section>
 
-            <CardActions border>
-        <Accordion allowZeroExpanded='true'>
-            <AccordionItem title='button' style={{fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Project Details
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project1_desc')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Executed Tasks
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project1_results')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
-            </CardActions>
-            <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
-          {/* Project 2 */}
-          <Card className="projects-card" shadow={5} style={{ width: '80%', margin: '10% 10%'}}>
-            <CardTitle style={{ height: '150px', background: 'url(https://sollicitatieblog.nl/wp-content/uploads/2019/04/ahold-delhaize-logo.png) center / 100%'}} ></CardTitle>
-
-            <CardActions border>
-        <Accordion allowZeroExpanded='true'>
-            <AccordionItem title='button' style={{fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Project Details
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project2_desc')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Executed Tasks
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project2_results')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
-            </CardActions>
-            <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
-
-          {/* Project 3 */}
-          <Card className="projects-card" shadow={5}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://www.reybex.com/wp-content/uploads/2019/07/fedex_reybex_schnittstelle.gif) center / cover'}} >React Project #3</CardTitle>
-
-            <CardActions border>
-              <Button colored onClick={this.handleOpenDialog}>Project</Button>
-
-                      <Dialog open={this.state.openDialog}>
-                        <DialogTitle>TEST</DialogTitle>
-                        <DialogContent>
-                          <p>TO BE FILLED IN</p>
-                        </DialogContent>
-                        <DialogActions>
-                          <Button type='button' onClick={this.handleCloseDialog}>Ok</Button>
-                        </DialogActions>
-                      </Dialog>
-
-              <Button colored onClick={this.handleOpenDialog}>Tasks</Button>
-                      <Dialog open={this.state.openDialog}>
-                        <DialogTitle>Activities and Results</DialogTitle>
-                        <DialogContent>
-                          <p>Allowing us to collect data will let us get you the information you want faster.</p>
-                        </DialogContent>
-                        <DialogActions>
-                          <Button type='button' onClick={this.handleCloseDialog}>Ok</Button>
-                        </DialogActions>
-                      </Dialog>
-
-            </CardActions>
-            <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
-
-          {/* Project 4 */}
-          <Card className="projects-card" shadow={5} style={{ width: '80%', margin: '10% 10%'}}>
-            <CardTitle style={{ height: '150px', background: 'url(https://sc02.alicdn.com/kf/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ/936445268/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ.jpg) center / 100%'}} ></CardTitle>
-
-            <CardActions border>
-        <Accordion allowZeroExpanded='true'>
-            <AccordionItem title='button' style={{fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Project Details
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project4_desc')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Executed Tasks
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project4_results')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
-            </CardActions>
-            <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
-          {/* Project 5 */}
-          <Card className="projects-card" shadow={5} style={{ width: '80%', margin: '10% 10%'}}>
-            <CardTitle style={{ height: '150px', background: 'url(https://www.freshersopenings.in/wp-content/uploads/2016/11/Ranstad-logo.gif) center / 100%'}} ></CardTitle>
-
-            <CardActions border>
-        <Accordion allowZeroExpanded='true'>
-            <AccordionItem title='button' style={{fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Project Details
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project5_desc')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Executed Tasks
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project5_results')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
-            </CardActions>
-            <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
-          {/* Project 6 */}
-          <Card className="projects-card" shadow={5} style={{ width: '80%', margin: '10% 10%'}}>
-            <CardTitle style={{ height: '150px', background: 'url(https://www.expertdoc.nl/wp-content/uploads/logo_DJI_MvVenJ-witruimte.jpg) center / 100%'}} ></CardTitle>
-
-            <CardActions border>
-        <Accordion allowZeroExpanded='true'>
-            <AccordionItem title='button' style={{fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Project Details
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project6_desc')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Executed Tasks
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-            		  {t('project6_results')}
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
-            </CardActions>
-            <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
+<section class="Gallery" id="gallery-2">
+    <div class="Gallery-header">
+    <a class="Gallery-close" onClick={() => this.closeAll()}>×</a></div>
+      <div><h1>Stream in Milan</h1></div>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image"></div>
+            <div class="Gallery-image"></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://foodretaildesign.nl/wp-content/uploads/2016/11/plattegrond_AH_XL_Purmerend.jpg)"}}></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+</section>
+<section class="Gallery" id="gallery-3">
+    <div class="Gallery-header"><a class="Gallery-close" onClick={() => this.closeAll()}>×</a></div>
+      <div><h1>Stream in Milan</h1></div>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image"></div>
+            <div class="Gallery-image"></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.supplychain247.com/images/article/fedex_tnt_executives_provide_insights_wide_image.jpg)"}}></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+</section>
+<section class="Gallery" id="gallery-4">
+    <div class="Gallery-header"><a class="Gallery-close" onClick={() => this.closeAll()}>×</a></div>
+      <div><h1>Stream in Milan</h1></div>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image"></div>
+            <div class="Gallery-image"></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.blue-growth.org/Blue_Growth_Technology_Innovation/AmphiMax/Pictures_AmphiMax/TNT_Shipment_74096817_Track_Trace_Chris_Bury_Blackburn_Concrete_Vibrator.jpg)"}}></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+</section>
+<section class="Gallery" id="gallery-5">
+    <div class="Gallery-header"><a class="Gallery-close" onClick={() => this.closeAll()}>×</a></div>
+      <div><h1>Stream in Milan</h1></div>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image"></div>
+            <div class="Gallery-image"></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/K_ha-sSG4rCHg9da8sJkazQnFMTYIDWfPJ0D94BrTzEl7EwIzNRBa0O6VqpsdC8rgu4xQKHPZU5eozcR5R90LYRAYlgE0LNgXW_DNRn5Q4lydYFNX7WPj_uog2tcvR2PPBFkZ6U6Kho)"}}></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+</section>
+<section class="Gallery" id="gallery-6">
+    <div class="Gallery-header"><a class="Gallery-close" onClick={() => this.closeAll()}>×</a></div>
+      <div><h1>Stream in Milan</h1></div>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image"></div>
+            <div class="Gallery-image"></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://nos.nl/data/image/2019/11/05/590326/2048x1152.jpg)"}}></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+    <div class="Gallery-images">
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+        <div class="Gallery-image"></div>
+    </div>
+</section>
         </div>
       )
   }

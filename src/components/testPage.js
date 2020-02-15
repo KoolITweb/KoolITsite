@@ -13,14 +13,18 @@ import {
 import { AwesomeButton } from 'react-awesome-button';
 import { withNamespaces } from 'react-i18next';
 import {Helmet} from "react-helmet";
+import Particles from 'react-particles-js';
 
 function AButton() {
   return <AwesomeButton type="primary">Button</AwesomeButton>;
 }
 
+
+
 class Test extends Component {
   constructor(props) {
     super(props);
+
     this.state = {};
     this.handleOpenDialog = this.handleOpenDialog.bind(this);
     this.handleCloseDialog = this.handleCloseDialog.bind(this);
@@ -44,19 +48,46 @@ class Test extends Component {
 
 	const { t } = this.props;
 
+    const particleOps = {
+    			particles:{
+    				number:{
+    					value: 150,
+    					density:{
+    						enable: true,
+    						value_area: 1000
+    					}
+    				},
+    			    interactivity: {
+            	        events: {
+            	            onhover: {
+            	                enable: true,
+            	                mode: "repulse"
+            	            }
+            	        }
+            	    }
+    			}
+    };
+
     return(
 
 
 
-<div class="testpage demo">
+<div class="test-page">
             <Helmet>
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
             </Helmet>
-
+            				<Particles params={particleOps} />
                <AButton>TEST</AButton>
 
+<div id="container-gallery">
+ <div id="rotating-gallery">
+  <figure class="aboutmeFigure"><img id="test_page_image" src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227192745/Skier.jpg" style={{width: '100%', height: '100%'}}/></figure>
+  <figure class="aboutmeFigure"><img id="test_page_image" src="https://thegreyalley.com/wp-content/uploads/2018/06/Football-Turfs-Banner.jpg" style={{width: '100%', height: '100%'}}/></figure>
+  <figure class="aboutmeFigure"><img id="test_page_image" src="https://cdn.images.express.co.uk/img/dynamic/59/590x/watch-tour-de-france-691467.jpg" style={{width: '100%', height: '100%'}}/></figure>
+  <figure class="aboutmeFigure"><img id="test_page_image" src="https://hetwapenvanwesepe.nl/wp-content/uploads/2018/03/pubquiz-profielfoto-bresactiviteiten.nl_.jpg" style={{width: '100%', height: '100%'}}/></figure>
+  <figure class="aboutmeFigure"><img id="test_page_image" src="https://redgrapevine.com.au/wp-content/uploads/sites/15/2018/11/australian-cuisines.png" style={{width: '100%', height: '100%'}}/></figure>
+  <figure class="aboutmeFigure"><img id="test_page_image" src="https://www.wearencc.com/wp-content/uploads/2018/10/MindGames-518x294.jpg" style={{width: '100%', height: '100%'}}/></figure>
+ </div>
+</div>
 
                        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>
                        <Dialog open={this.state.openDialog}>
@@ -105,8 +136,7 @@ class Test extends Component {
 
 
 
-      <div id="large-header" class="large-header">
-         <canvas id="demo-canvas"></canvas>
+
 
           <Card shadow={0} style={{width: '320px', height: '320px', margin: 'auto'}}>
               <CardTitle expand style={{color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'}}>Update</CardTitle>
@@ -121,11 +151,6 @@ class Test extends Component {
 
 
 
-
-
-
-
-          </div>
                </div>
 
     )

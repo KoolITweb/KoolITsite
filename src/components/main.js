@@ -5,6 +5,8 @@ import Resume from './resume';
 import Projects from './projects';
 import Contact from './contact';
 import Test from './testPage';
+import Ppc from './ppc';
+
 import { Switch, Route } from 'react-router-dom';
 
 const Main = ()=> (
@@ -15,6 +17,7 @@ const Main = ()=> (
 	  <Route exact path="/projects" component={Projects} />
 	  <Route exact path="/contact" component={Contact} />
 	  <Route exact path="/test-page" component={Test} />
+	  <Route exact path="/ppc" component={Ppc} />
 	</Switch>
 )
 
