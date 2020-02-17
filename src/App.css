@@ -564,6 +564,27 @@ background-image: linear-gradient(-330deg, #000000 0%, #231557 30%, #44107A 47%,
   transition: all 0.2s cubic-bezier(0.7, 0, 0.78, 1) 0.2s;
   transform: scale(2.1) translate(-29%, -80%);
 }
+
+.projects_top_header, .projects_header{
+	font-weight: bold;
+	font-size: 250%;
+	text-align: left;
+	width: 47rem;
+	margin: 1% auto;
+}
+
+.projects_top_header{
+	margin-top: 2%;
+}
+
+.projects_text {
+	font-size: 110%;
+	text-align: left;
+	width: 47rem;
+	margin: 1% auto;
+	margin-bottom: 2%;
+}
+
 .Gallery {
   display: block;
   position: fixed;
@@ -579,18 +600,18 @@ background-image: linear-gradient(-330deg, #000000 0%, #231557 30%, #44107A 47%,
   overflow-y: scroll;
 }
 .Gallery-header {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 8.4%;
   background-color: #eee;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 .Gallery-close {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  font-size: 3rem;
+  font-size: 300%;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -600,9 +621,9 @@ background-image: linear-gradient(-330deg, #000000 0%, #231557 30%, #44107A 47%,
 .Gallery-images {
   display: flex;
   width: 47rem;
-  margin: 0 auto;
+  margin: 1% auto;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 2%;
 }
 .Gallery-images:nth-child(3) {
   transition: all 0.2s cubic-bezier(0.7, 0, 0.78, 1) 0.33s;
@@ -632,11 +653,11 @@ background-image: linear-gradient(-330deg, #000000 0%, #231557 30%, #44107A 47%,
 }
 .Gallery-image {
   display: block;
-  width: 15rem;
-  height: 9.5rem;
+  width: 5rem;
+  height: 3rem;
   transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-  background: #aebfc7;
-  background-size: auto 100%;
+  background: transparent;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
