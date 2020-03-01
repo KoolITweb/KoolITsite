@@ -13,13 +13,11 @@ import {
 import { AwesomeButton } from 'react-awesome-button';
 import { withNamespaces } from 'react-i18next';
 import {Helmet} from "react-helmet";
-import Particles from 'react-particles-js';
+
 
 function AButton() {
   return <AwesomeButton type="primary">Button</AwesomeButton>;
 }
-
-
 
 class Test extends Component {
   constructor(props) {
@@ -42,31 +40,10 @@ class Test extends Component {
     });
   }
 
-/*https://codepen.io/jasperlachance/pen/QNMwBg*/
 
   render() {
 
 	const { t } = this.props;
-
-    const particleOps = {
-    			particles:{
-    				number:{
-    					value: 150,
-    					density:{
-    						enable: true,
-    						value_area: 1000
-    					}
-    				},
-    			    interactivity: {
-            	        events: {
-            	            onhover: {
-            	                enable: true,
-            	                mode: "repulse"
-            	            }
-            	        }
-            	    }
-    			}
-    };
 
     return(
 
@@ -74,8 +51,8 @@ class Test extends Component {
 
 <div class="test-page">
             <Helmet>
+            <script src=""></script>
             </Helmet>
-            				<Particles params={particleOps} />
                <AButton>TEST</AButton>
 
 <div id="container-gallery">
