@@ -9,45 +9,39 @@ class Contact extends Component {
     const { t } = this.props;
 
     return(
-      <div className="contact-body">
+      <div className="background-containers contact-body">
         <Grid className="contact-grid">
-          <Cell col={6}>
-            <h2>Daan Koolman</h2>
-            <img
-              src="https://cdn2.iconfinder.com/data/icons/avatar-2/512/Fred_man-512.png"
-              alt="avatar"
-              style={{height: '250px'}}
-               />
-             <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>Description</p>
+            <img className="satellite" src="https://upload.wikimedia.org/wikipedia/commons/2/29/SAC-D_spacecraft_model.png" alt=""/>
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="clouds"></div>
 
-          </Cell>
-          <Cell col={6}>
-            <h2>Contact Me</h2>
-            <hr/>
+          <Cell col={6} style={{zIndex: '4', background: "rgb(0,0,0)", borderRadius: "15px", color: "white", opacity:".8", position: "absolute", marginTop: "15%"}}>
+            <h2 style={{ fontWeight: "bold", fontSize: "450%"}}>Contact Me</h2>
+            <hr style={{borderTop:"5px dotted white", width: "66%"}}/>
 
-            <div className="contact-list">
-              <List>
+            <div className="contact-list" >
+              <List style={{marginLeft: "15%"}}>
                 <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
+                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton', color: "white", fontWeight: "bold"}}>
                     <i className="fa fa-phone-square" aria-hidden="true"/>
-                      {t('contact_phone')}
+                    {t('contact_phone')}
                   </ListItemContent>
                 </ListItem>
 
                 <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
+                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton', color: "white", fontWeight: "bold"}}>
                     <i className="fa fa-envelope" aria-hidden="true"/>
                     daan@koolit.nl
                   </ListItemContent>
                 </ListItem>
 
                 <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
+                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton', color: "white", fontWeight: "bold"}}>
                     <i className="fa fa-skype" aria-hidden="true"/>
-                    SkypeID
+                    daan_koolman
                   </ListItemContent>
                 </ListItem>
-
 
               </List>
             </div>
