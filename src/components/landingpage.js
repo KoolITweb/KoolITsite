@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Grid, Cell } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
+import profilePic from '../images/profile/Daan.jpg'
 
 class Landing extends Component{
 	render() {
@@ -20,7 +21,7 @@ class Landing extends Component{
 						<img
 							//src="https://image.freepik.com/vrije-vector/programmatool-van-softwaretaal_24877-763.jpg"
 							//src="https://media-exp1.licdn.com/dms/image/C4E0BAQFYY0NadTysuw/company-logo_200_200/0?e=1588809600&v=beta&t=Pz2VxHQUqeq6AuoSVzILABelw0HbwCZzaudtwDvcXVg"
-							src="https://media-exp1.licdn.com/dms/image/C4D03AQElnTL_5st7Ig/profile-displayphoto-shrink_200_200/0?e=1586390400&v=beta&t=GDRDUZ2O2dqgBwkInRmK2Txe61p6KYV-iKLMFjFMPQU"
+							src={profilePic}
 							alt="avatar"
 							className="koolit-avatar"
 						/>
