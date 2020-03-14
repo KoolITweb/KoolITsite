@@ -12,8 +12,31 @@ function importAll(r) {
   return images;
 }
 
+const imageDescription = [
+    "sheet 1",
+    "sheet 2",
+    "sheet 3",
+    "sheet 4",
+    "sheet 5",
+    "sheet 6",
+    "sheet 7",
+    "sheet 8",
+    "sheet 9",
+    "sheet 10"
+]
 
-
+const imageText = [
+    "sheet 1",
+    "sheet 2",
+    "sheet 3",
+    "sheet 4",
+    "sheet 5",
+    "sheet 6",
+    "sheet 7",
+    "sheet 8",
+    "sheet 9",
+    "sheet 10"
+]
 
 const ImageURL = [
   images['qualityPyramid.png'],
@@ -27,6 +50,7 @@ const ImageURL = [
   images['practiceResult.jpg'],
   images['practiceResult.jpg']
 ]
+
 
 class Ppc extends Component {
   constructor(props) {
@@ -119,7 +143,7 @@ dotHandler = (event) => {
   var imgIndex = event.target.id;
 
   var slider = document.getElementById("slider-img-container");
-  this.left = (parseInt(imgIndex))*-60;
+  //this.left = (parseInt(imgIndex))*-60;
   slider.style.left = this.left+'px';
 
   this.setState({currentIndex : parseInt(imgIndex)})
@@ -130,7 +154,7 @@ updateImage = (event ) => {
   var imgIndex = event.target.id;
 
   var slider = document.getElementById("slider-img-container");
-  this.left = parseInt(imgIndex)*-60;
+  //this.left = parseInt(imgIndex)*-60;
   slider.style.left = this.left+'px';
 
   this.setState({currentIndex : parseInt(imgIndex) })
@@ -162,12 +186,15 @@ render() {
   const carouselDots = dotNumbers.map((n,index)=><div className={['carousel-dot', index === this.state.currentIndex ? 'active' : ''].join(' ')} key={n} id={n} onClick={this.dotHandler} >&#9679;</div>)
                                       const ImgItem =
                                       <div className="gallery-img-container">
-                                        <img className="gallery-img" src={ImageURL[i]} />
-                                        <button className= "prev-carousel-button" onClick={this.prevHandler}>&#9664;</button>
+                                        <img className="gallery-img" src={ImageURL[i]}/>
+                                        <h2>
+                                        <span>{imageDescription[i]}</span>
+                                        <p>{imageText[i]}</p></h2>
+                                        <div className= "prev-carousel-button" onClick={this.prevHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9664;</div>
                                         <div id="carousel-dot-container">{carouselDots}</div>
-                                        <div className= "next-carousel-button" onClick={this.nextHandler}>&#9654;</div>
-                                        { this.state.slideshow===false ? <button className="slideshow-button" onClick={this.slideshowHandler}>&#9654;</button> : <button className="slideshow-button" onClick={this.slideshowHandler}>&#9646;&#9646;</button> }
-                                        { this.state.fullscreen===false ? <button className="fullscreen-button" onClick={this.enterfullScreen}>&#9635;</button> : <button className="fullscreen-button" onClick={this.exitfullScreen}>&#9635;</button> }
+                                        <div className= "next-carousel-button" onClick={this.nextHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9654;</div>
+                                        { this.state.slideshow===false ? <button className="slideshow-button" onClick={this.slideshowHandler}>Play slide show &#9654;</button> : <button className="slideshow-button" onClick={this.slideshowHandler}>&#9646;&#9646;</button> }
+                                        { this.state.fullscreen===false ? <button className="fullscreen-button" onClick={this.enterfullScreen}>Full screen &#9635;</button> : <button className="fullscreen-button" onClick={this.exitfullScreen}>&#9635;</button> }
 
                                       </div>
                                       var imgId=0;
