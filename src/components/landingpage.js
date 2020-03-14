@@ -32,17 +32,17 @@ class Landing extends Component{
 						<div className="social-links">
 
 							{/* linkedIn */}
-							<a href="http://google.com" rel="noopener noreferrer" target="_blank">
+							<a href="https://www.linkedin.com/in/daan-koolman/" rel="noopener noreferrer" target="_blank">
 								<i className="fa fa-linkedin-square" aria-hidden="true" />
 							</a>
 
 							{/* Github */}
-							<a href="http://google.com" rel="noopener noreferrer" target="_blank">
+							<a href="https://github.com/KoolITweb/KoolITsite" rel="noopener noreferrer" target="_blank">
 								<i className="fa fa-github-square" aria-hidden="true" />
 							</a>
 
 							{/* PPC */}
-							<a href="http://google.com" rel="noopener noreferrer" target="_blank">
+							<a href="https://productpracticescanvas.org/" rel="noopener noreferrer" target="_blank">
 								<i className="fa fa-globe" aria-hidden="true">
 									<a style={{ fontSize:'20px', color: 'white', fontWeight: 'bold' }}> PPC</a>
 								</i>
