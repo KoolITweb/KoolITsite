@@ -46,17 +46,19 @@ class Test extends Component {
 	const { t } = this.props;
 
     return(
-
-<div id="container-gallery">
- <div id="rotating-gallery">
-  <figure class="APItest" onClick={() => window.open("/api")}><img id="test_page_image" src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227192745/Skier.jpg" style={{width: '100%', height: '100%'}}/></figure>
-  <figure class="dropDown" onClick={() => window.open("/test/dropdown")}><img id="test_page_image" src="https://thegreyalley.com/wp-content/uploads/2018/06/Football-Turfs-Banner.jpg" style={{width: '100%', height: '100%'}}/></figure>
-  <figure class="login" onClick={() => window.open("/test/login")}><img id="test_page_image" src="https://cdn.images.express.co.uk/img/dynamic/59/590x/watch-tour-de-france-691467.jpg" style={{width: '100%', height: '100%'}}/></figure>
-  <figure class="testButtons" onClick={() => window.open("/test/buttons")}><img id="test_page_image" src="https://hetwapenvanwesepe.nl/wp-content/uploads/2018/03/pubquiz-profielfoto-bresactiviteiten.nl_.jpg" style={{width: '100%', height: '100%'}}/></figure>
-  <figure class="textfields" onClick={() => window.open("/test/textfields")}><img id="test_page_image" src="https://redgrapevine.com.au/wp-content/uploads/sites/15/2018/11/australian-cuisines.png" style={{width: '100%', height: '100%'}}/></figure>
-  <figure class="slider" onClick={() => window.open("/test/sliders")}><img id="test_page_image" src="https://www.wearencc.com/wp-content/uploads/2018/10/MindGames-518x294.jpg" style={{width: '100%', height: '100%'}}/></figure>
- </div>
-</div>
+        <div>
+            <div class="twinkling"></div>
+            <div id="container-gallery">
+            <div id="rotating-gallery">
+                <figure class="APItest" onClick={() => window.open("/api")}><img id="test_page_image" src="https://www.eaglecmms.com/wp-content/uploads/2019/10/REST-API.png" style={{width: '100%', height: '100%'}}/></figure>
+                <figure class="dropDown" onClick={() => window.open("/test/dropdown")}><img id="test_page_image" src="https://www.abeautifulsite.net/uploads/2017/10/bs4-dropdown-tips.png" style={{width: '100%', height: '100%'}}/></figure>
+                <figure class="login" onClick={() => window.open("/test/login")}><img id="test_page_image" src="https://www.pngitem.com/pimgs/m/273-2738719_user-login-icon-png-transparent-background-login-icon.png" style={{width: '100%', height: '100%'}}/></figure>
+                <figure class="testButtons" onClick={() => window.open("/test/buttons")}><img id="test_page_image" src="https://tailwindcomponents.com/storage/873/conversions/temp86384-thumb.jpg" style={{width: '100%', height: '100%'}}/></figure>
+                <figure class="textfields" onClick={() => window.open("/test/textfields")}><img id="test_page_image" src="https://i.stack.imgur.com/egOpy.png" style={{width: '100%', height: '100%'}}/></figure>
+                <figure class="slider" onClick={() => window.open("/test/sliders")}><img id="test_page_image" src="https://i.stack.imgur.com/xp0cX.png" style={{width: '100%', height: '100%'}}/></figure>
+            </div>
+            </div>
+        </div>
     )
   }
 }

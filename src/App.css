@@ -18,6 +18,10 @@
 	margin: 200px;
 }
 
+/*.mdl-layout {
+	height: fit-content !important;
+}*/
+
 .mdl-layout__header-row .mdl-navigation__link {
 	font-weight: bold;
 	font-size: 125%;
@@ -60,14 +64,14 @@ translate_option{
 }
 
 .koolit-avatar {
-    width: 400px;
+    width: 300px;
     height: auto;
     overflow: hidden;
     border-radius: 200px;
     object-fit: cover;
-    margin-top: 8%;
+    margin-top: 10%;
     box-shadow: 0px 2.5px 7.5px 7.5px rgba(150,150,150);
-    opacity: 0.84;
+    opacity: 0.9;
 }
 
 .koolit-banner {
@@ -124,11 +128,13 @@ translate_option{
 
 .moon{
 	position: absolute;
- 	height: 20em;
-	width: 20em;
-	right: 0%;
+ 	height: 55%;
+	width: 30%;
+	right: -10%;
 	z-index: 3;
+	top: -10%;
 }
+
 
 @keyframes move-background {
   from {
@@ -222,16 +228,6 @@ translate_option{
 }
 
 /* projectsPage css */
-.projects-grid {
-	display: grid;
-  	grid-template-columns: repeat(3, 30%);
-  	grid-template-rows: repeat(2, 50%);
-	background: #40E0D0;  /* fallback for old browsers */
-	background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	width: 100%;
-	height: 100%;
-	padding-left: 5%;
-}
 
 .projects-card{
 	position: fixed;
@@ -246,8 +242,8 @@ translate_option{
 /*projects-page styling*/
 
 .Grid {
-  width: 80rem;
-  margin: 5% auto;
+  width: 84rem;
+  margin: auto;
 }
 .Grid-row {
   display: flex;
@@ -264,8 +260,8 @@ translate_option{
   transition: background-color 0.2s cubic-bezier(0.5, 0.3, 0.8, 0.06);
   color: #000;
   width: 200px;
-  box-shadow: 0 20px 30px rgba(0,0,0,.2);
   border-radius: 15px;
+  box-shadow: 0px 4px 10px 10px rgba(150,150,150,.7);
 }
 .Card-thumb {
   position: relative;
@@ -699,6 +695,15 @@ translate_option{
 
 
 /* Resume Page css */
+.resume_column_left, .resume-right-col {
+  box-shadow: 0px 0px 5px 5px rgba(150,150,150,.7);
+}
+
+.resume_column_left {
+  border-radius: 15px;
+}
+
+
 .resume-right-col {
   background: rgb(0,0,0,.92);
   color: white;
@@ -787,12 +792,13 @@ translate_option{
   padding-right: 5rem;
 }
 
-.satellite{
+.spaceCabbage{
 	position: absolute;
- 	height: 30em;
-	width: 30em;
-	right: 0%;
+ 	height: 45%;
+	width: 28%;
+	right: -6%;
 	z-index: 3;
+	top: 1%;
 }
 
 
@@ -806,7 +812,7 @@ translate_option{
 #aboutPage {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: relative;
   flex-direction: row;
   flex-wrap: wrap;
   margin-right: 5%;
@@ -816,7 +822,7 @@ div.item {
   flex-basis: 25%;
   position: relative;
   float: left;
-  margin: 4%;
+  margin: 2.5%;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
@@ -830,7 +836,7 @@ div.item * {
 div.item img {
   vertical-align: top;
     border-radius: 15px;
-    box-shadow: 0 20px 30px rgba(0,0,0,.8);
+    box-shadow: 0px 4px 10px 10px rgba(150,150,150,.7);
     width: 100%;
     height: 100%
 }
@@ -859,7 +865,7 @@ div.item.aboutme i p {
   width: 400%;
   margin-left: -150%;
   margin-top: 20%;
-  font-size: 75%;
+  font-size: 45%;
   font-weight: bold;
 }
 
@@ -914,6 +920,7 @@ div.item *{
 	height: 140px;
 	position: relative;
 	perspective: 1000px;
+	z-index: 2;
 }
 #rotating-gallery {
 	width: 100%;
@@ -1050,19 +1057,35 @@ div.item *{
   border-radius: 3px;
 }
 
-
+.ppcHeader {
+	background-color: black;
+    width: 90%;
+	opacity: .7;
+    border-radius: 15px;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0px 0px 1px 1px rgba(150,150,150);
+    color: white;
+}
 
 
 
 
 
 /*background everywhere*/
-  body {
-    background: linear-gradient(-330deg, #000000 0%, #231557 30%, #44107A 47%, #FF1361 67%, #FFF800 100%);
-    background-size: 300% 300%;
-    -webkit-animation: Background 25s ease infinite;
-    -moz-animation: Background 25s ease infinite;
-    animation: Background 25s ease infinite;
+
+body {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: -1;
   }
 
   @-webkit-keyframes Background {

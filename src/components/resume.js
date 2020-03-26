@@ -16,7 +16,8 @@ class Resume extends Component {
 	const { t } = this.props;
 
     return(
-      <div>
+      <div className="resumePage">
+
         <Grid>
           <Cell className="resume_column_left" col={4}>
           <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%'}}>

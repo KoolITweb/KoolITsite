@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
-
+import cabbage from '../images/Cabbage_detail.png';
 
 class Contact extends Component {
   render() {
@@ -11,7 +11,7 @@ class Contact extends Component {
     return(
       <div className="background-containers contact-body">
         <Grid className="contact-grid">
-            <img className="satellite" src="https://upload.wikimedia.org/wikipedia/commons/2/29/SAC-D_spacecraft_model.png" alt=""/>
+            <img className="spaceCabbage" src={cabbage} alt=""/>
             <div class="stars"></div>
             <div class="twinkling"></div>
             <div class="clouds"></div>

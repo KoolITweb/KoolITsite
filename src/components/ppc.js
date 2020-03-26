@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { withNamespaces } from 'react-i18next';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import '../slider.css';
-import profilePic from '../images/profile/Daan.jpg';
 
 const images = importAll(require.context('../images/ppc', false, /\.(png|jpe?g)$/));
 
@@ -73,7 +72,7 @@ class Ppc extends Component {
       slider.style.left = this.left+'px';
     }
     else {
-      this.left= this.left-60;
+      //this.left= this.left-60;
       console.log(this.left);
       slider.style.left = this.left+'px';
     }
@@ -205,10 +204,14 @@ render() {
 
                                                                                      return (
                                                                                      <div className="ppcPage">
-                                                                                     <div id="gallery-container" ref={this.myImage}>
-                                                                                       {ImgItem}
-                                                                                       <div id="slider-img-container" ref={this.mySlider}>{sliderImages}</div>
-                                                                                     </div>
+                                                                                        <div className="ppcHeader">
+                                                                                        <h1 style={{fontWeight: "bold"}}>Product Practices Canvas</h1>
+                                                                                        <p>EXPLAIN IT!</p>
+                                                                                        </div>
+                                                                                        <div id="gallery-container" ref={this.myImage}>
+                                                                                            {ImgItem}
+                                                                                            <div id="slider-img-container" ref={this.mySlider}>{sliderImages}</div>
+                                                                                        </div>
                                                                                      </div>
                                                                                     )
   }

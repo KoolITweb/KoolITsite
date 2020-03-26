@@ -30,7 +30,7 @@ const Main = ()=> (
 	  <Route exact path="/test/textfields" component={Textfields} />
 	  <Route exact path="/test/buttons" component={Buttons} />
 	  <Route exact path="/test/Login" component={Login} />
-	  <Route exact path="/test/slider" component={Sliders} />
+	  <Route exact path="/test/sliders" component={Sliders} />
 	</Switch>
 )
 

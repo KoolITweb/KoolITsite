@@ -30,7 +30,7 @@ closeAll () {
   	  const { t } = this.props;
 
       return(
-<div className="projects">
+<div className="projects-grid">
 <section class="Grid">
     <div class="Grid-row">
         <a class="Card" onClick={() => this.openGallery(7)} id="card-7">
@@ -40,7 +40,7 @@ closeAll () {
                 <div class="Card-shadow"></div>
                 <div class="Card-image" style={{backgroundImage: "url(https://www.vanadengage.com/wp-content/uploads/2018/11/Transavia-vierkant_klein-900x.png)"}}></div>
             </div>
-            <div class="Card-title"><span>Project details</span></div>
+            <div class="Card-title"><span>Hover the logo</span></div>
             <div class="Card-explore"><span> Project details and activities</span></div>
             <button class="Card-button">Click here</button></a>
         <a class="Card" onClick={() => this.openGallery(1)} id="card-1">
@@ -100,7 +100,7 @@ closeAll () {
                 <div class="Card-shadow"></div>
                 <div class="Card-shadow"></div>
                 <div class="Card-shadow"></div>
-                <div class="Card-image" style={{backgroundImage: "url(https://www.expertdoc.nl/wp-content/uploads/logo_DJI_MvVenJ-witruimte.jpg)"}}></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://www.strafrechtketen.nl/binaries/medium/content/gallery/strafrechtketen/content-afbeeldingen/2019/justitie-en-veiligheid-bulletin.jpg)"}}></div>
             </div>
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span> Project details and activities</span></div><button class="Card-button">Click here</button></a>

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Grid, Cell } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
-import profilePic from '../images/profile/Daan.jpg'
+import profilePic from '../images/profile/avataaars.png'
+import earth from '../images/earth1.png';
 
 class Landing extends Component{
 	render() {
@@ -14,7 +15,7 @@ class Landing extends Component{
 				<Grid className='landing-grid'>
 
 					<Cell col={12}>
-						<img className="moon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""/>
+						<img className="moon" src={earth} alt=""/>
                     	<div class="stars"></div>
                         <div class="twinkling"></div>
                         <div class="clouds"></div>

@@ -9,7 +9,6 @@ class About extends Component {
 
     return (
 		<div>
-
         <div id="aboutPage">
             <div class="item aboutme">
               <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227192745/Skier.jpg"/>
