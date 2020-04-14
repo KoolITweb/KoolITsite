@@ -1,5 +1,5 @@
 .header-color {
-	opacity: 0.8;
+	opacity: .8;
 }
 
 .aboutmeClass{
@@ -711,6 +711,10 @@ translate_option{
   border-radius: 15px;
 }
 
+.resumeHeaderAdjust{
+    margin: 4px !important;
+}
+
 .vertical-timeline-element-date {
 	font-weight: bold !important;
 	font-size: 200% !important;
@@ -751,6 +755,13 @@ translate_option{
 	font-size: 150% !important;
 }
 
+.progressbar{
+    background-color: orangered !important;
+}
+
+.bufferbar{
+    background-image: linear-gradient(to right, rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), linear-gradient(to right, rgba(5,5,5, 0.7), rgba(5,5,5, 0.7)) !important;
+}
 
 /* contact page css */
 .contact-body {

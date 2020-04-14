@@ -25,16 +25,16 @@ const imageDescription = [
 ]
 
 const imageText = [
-    "sheet 1",
-    "sheet 2",
-    "sheet 3",
-    "sheet 4",
-    "sheet 5",
-    "sheet 6",
-    "sheet 7",
-    "sheet 8",
-    "sheet 9",
-    "sheet 10"
+    "sheet1",
+    "sheet2",
+    "sheet3",
+    "sheet4",
+    "sheet5",
+    "sheet6",
+    "sheet7",
+    "sheet8",
+    "sheet9",
+    "sheet10"
 ]
 
 const ImageURL = [
@@ -178,42 +178,42 @@ nextHandler =(event) => {
 }
 
 render() {
-  //class="material-icons"
+
+  const { t } = this.props;
+
   var i = this.state.currentIndex;
   console.log(i);
   var dotNumbers = Array.from(Array(ImageURL.length).keys());
   const carouselDots = dotNumbers.map((n,index)=><div className={['carousel-dot', index === this.state.currentIndex ? 'active' : ''].join(' ')} key={n} id={n} onClick={this.dotHandler} >&#9679;</div>)
-                                      const ImgItem =
-                                      <div className="gallery-img-container">
-                                        <img className="gallery-img" src={ImageURL[i]}/>
-                                        <h2>
-                                        <span>{imageDescription[i]}</span>
-                                        <p>{imageText[i]}</p></h2>
-                                        <div className= "prev-carousel-button" onClick={this.prevHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9664;</div>
-                                        <div id="carousel-dot-container">{carouselDots}</div>
-                                        <div className= "next-carousel-button" onClick={this.nextHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9654;</div>
-                                        { this.state.slideshow===false ? <button className="slideshow-button" onClick={this.slideshowHandler}>Play slide show &#9654;</button> : <button className="slideshow-button" onClick={this.slideshowHandler}>&#9646;&#9646;</button> }
-                                        { this.state.fullscreen===false ? <button className="fullscreen-button" onClick={this.enterfullScreen}>Full screen &#9635;</button> : <button className="fullscreen-button" onClick={this.exitfullScreen}>&#9635;</button> }
+  const ImgItem =
+  <div className="gallery-img-container">
+    <img className="gallery-img" src={ImageURL[i]}/>
+    <h2>
+    <span>{imageDescription[i]}</span>
+    <p>{t('ppc_'+imageText[i])}</p></h2>
+    <div className= "prev-carousel-button" onClick={this.prevHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9664;</div>
+    <div id="carousel-dot-container">{carouselDots}</div>
+    <div className= "next-carousel-button" onClick={this.nextHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9654;</div>
+    { this.state.slideshow===false ? <button className="slideshow-button" onClick={this.slideshowHandler}>Play slide show &#9654;</button> : <button className="slideshow-button" onClick={this.slideshowHandler}>&#9646;&#9646;</button> }
+    { this.state.fullscreen===false ? <button className="fullscreen-button" onClick={this.enterfullScreen}>Full screen &#9635;</button> : <button className="fullscreen-button" onClick={this.exitfullScreen}>&#9635;</button> }
 
-                                      </div>
-                                      var imgId=0;
+     </div>
 
+     var imgId=0;
+     const sliderImages = ImageURL.slice(0,10).map ((n,index)=><img className={['slider-img', index === this.state.currentIndex ? 'active' : ''].join(' ')} src={n} key={n} id={imgId++} onClick={this.updateImage}/>)
 
-                                      const sliderImages = ImageURL.slice(0,10).map ((n,index)=><img className={['slider-img', index === this.state.currentIndex ? 'active' : ''].join(' ')} src={n} key={n} id={imgId++} onClick={this.updateImage}/>)
-
-
-                                                                                     return (
-                                                                                     <div className="ppcPage">
-                                                                                        <div className="ppcHeader">
-                                                                                        <h1 style={{fontWeight: "bold"}}>Product Practices Canvas</h1>
-                                                                                        <p>EXPLAIN IT!</p>
-                                                                                        </div>
-                                                                                        <div id="gallery-container" ref={this.myImage}>
-                                                                                            {ImgItem}
-                                                                                            <div id="slider-img-container" ref={this.mySlider}>{sliderImages}</div>
-                                                                                        </div>
-                                                                                     </div>
-                                                                                    )
+     return (
+         <div className="ppcPage">
+            <div className="ppcHeader">
+            <h1 style={{fontWeight: "bold"}}>Product Practices Canvas</h1>
+            <p>{t('ppc_intro')}</p>
+                </div>
+                <div id="gallery-container" ref={this.myImage}>
+                    {ImgItem}
+                    <div id="slider-img-container" ref={this.mySlider}>{sliderImages}</div>
+                </div>
+             </div>
+     )
   }
 }
 

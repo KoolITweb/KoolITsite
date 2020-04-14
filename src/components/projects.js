@@ -32,8 +32,21 @@ closeAll () {
       return(
 <div className="projects-grid">
 <section class="Grid">
+
     <div class="Grid-row">
-        <a class="Card" onClick={() => this.openGallery(7)} id="card-7">
+
+        <a class="Card" onClick={() => this.openGallery(8)} id="card-8">
+            <div class="Card-thumb">
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-shadow"></div>
+                <div class="Card-image" style={{backgroundImage: "url(https://fr.jobs.game/images/clients/logo/P/3895.jpg)"}}></div>
+            </div>
+            <div class="Card-title"><span>Hover the logo</span></div>
+            <div class="Card-explore"><span> Project details and activities</span></div>
+            <button class="Card-button">Click here</button></a>
+
+        <a class="Card" onClick={() => this.openGallery(7)} id="card-8">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
                 <div class="Card-shadow"></div>
@@ -43,6 +56,7 @@ closeAll () {
             <div class="Card-title"><span>Hover the logo</span></div>
             <div class="Card-explore"><span> Project details and activities</span></div>
             <button class="Card-button">Click here</button></a>
+
         <a class="Card" onClick={() => this.openGallery(1)} id="card-1">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
@@ -53,6 +67,10 @@ closeAll () {
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span> Project details and activities</span></div>
             <button class="Card-button">Click here</button></a>
+
+     </div>
+     <div class="Grid-row">
+
         <a class="Card" onClick={() => this.openGallery(2)} id="card-2">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
@@ -63,8 +81,7 @@ closeAll () {
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span> Project details and activities</span></div>
             <button class="Card-button">Click here</button></a>
-    </div>
-    <div class="Grid-row">
+
         <a class="Card" onClick={() => this.openGallery(3)} id="card-3">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
@@ -75,6 +92,7 @@ closeAll () {
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span>Project details and activities</span></div>
             <button class="Card-button">Click here</button></a>
+
        <a class="Card" onClick={() => this.openGallery(4)} id="card-4">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
@@ -84,6 +102,10 @@ closeAll () {
             </div>
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span>Project details and activities</span></div><button class="Card-button">Click here</button></a>
+
+      </div>
+      <div class="Grid-row">
+
        <a class="Card" onClick={() => this.openGallery(5)} id="card-5">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
@@ -93,8 +115,7 @@ closeAll () {
             </div>
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span>Project details and activities</span></div><button class="Card-button">Click here</button></a>
-    </div>
-    <div class="Grid-row">
+
        <a class="Card" onClick={() => this.openGallery(6)} id="card-6">
             <div class="Card-thumb">
                 <div class="Card-shadow"></div>
@@ -104,8 +125,11 @@ closeAll () {
             </div>
             <div class="Card-title"><span>Project details</span></div>
             <div class="Card-explore"><span> Project details and activities</span></div><button class="Card-button">Click here</button></a>
+
     </div>
 </section>
+
+
 <section class="Gallery" id="gallery-1" onClick={() => this.closeAll()}>
     <div class="Gallery-header">
       <a class="Gallery-close" onClick={() => this.closeAll()}>×</a>
@@ -358,6 +382,35 @@ closeAll () {
     </div>
     <Button colored onClick={() => this.closeAll()} style={{marginLeft: "80%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Close page</Button>
 </section>
+
+<section class="Gallery" id="gallery-8" onClick={() => this.closeAll()}>
+    <div class="Gallery-header">
+      <a class="Gallery-close" onClick={() => this.closeAll()}>×</a>
+    </div>
+	<h1 class="projects_top_header">Project details</h1>
+    	<p class="projects_text">{t('project8_desc')}</p>
+    <div class="Gallery-images">
+        <div class="Gallery-left">
+            <div class="Gallery-image" style={{backgroundImage: "url()", width: "15rem", height: "9.5rem"}}></div>
+            <div class="Gallery-image" style={{backgroundImage: "url()", width: "15rem", height: "9.5rem"}}></div>
+        </div>
+        <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/k0i2kJAY76gXZg9EQQY9b_TQIaNMeVSCbmLo9Q43WcAlZPjXTHiMbg3OGIYX3UunD9WrmC1cmEzS-TGAKSeYXF-JI_afIVLmu4Mj4OppMw5l8Vj0TDGoeiCWZ01rbnEv_WdUE_fJst7sfMHhLOU)"}}></div>
+    </div>
+        	<h1 class="projects_header">Activities</h1>
+        	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project8_results')}</p>
+        	<h1 class="projects_header">Tooling</h1>
+    <div class="Gallery-images">
+        <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+        <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+        <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+        <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+        <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+        <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+    </div>
+    <Button colored onClick={() => this.closeAll()} style={{marginLeft: "80%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Close page</Button>
+</section>
+
+
 
         </div>
       )
