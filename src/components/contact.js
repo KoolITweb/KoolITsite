@@ -17,7 +17,7 @@ class Contact extends Component {
             <div class="clouds"></div>
 
           <Cell col={6} style={{zIndex: '4', background: "rgb(0,0,0)", borderRadius: "15px", color: "white", opacity:".8", position: "absolute", marginTop: "15%"}}>
-            <h2 style={{ fontWeight: "bold", fontSize: "450%"}}>Contact Me</h2>
+            <h2 style={{ fontWeight: "bold", fontSize: "450%"}}>{t('contact_me_title')}</h2>
             <hr style={{borderTop:"5px dotted white", width: "66%"}}/>
 
             <div className="contact-list" >

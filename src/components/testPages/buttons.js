@@ -13,6 +13,7 @@ import {
 import { AwesomeButton } from 'react-awesome-button';
 import { withNamespaces } from 'react-i18next';
 import {Helmet} from "react-helmet";
+import construction from '../../images/under_construction.png';
 
 
 function AButton() {
@@ -48,10 +49,15 @@ class Test extends Component {
     return(
 
 <div class="test-page">
-            <Helmet>
-            <script src=""></script>
-            </Helmet>
-               <AButton>TEST</AButton>
+        <AButton>TEST</AButton>
+
+ 		<div>
+             <img className="underConstruction" src={construction}/>
+             <AButton>BACK TO HOMEPAGE</AButton>
+        </div>
+
+
+
 
 <div id="container-gallery">
  <div id="rotating-gallery">

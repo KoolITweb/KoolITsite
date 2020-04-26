@@ -1,7 +1,4 @@
-import React, { Component, link } from 'react';
-import { Tabs, Tab, Grid, Cell,
-Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton,
-Dialog, DialogTitle, DialogContent, DialogActions, Icon  } from 'react-mdl';
+import React, { Component } from 'react';
 import {
     Accordion,
     AccordionItem,

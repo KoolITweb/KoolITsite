@@ -8,9 +8,19 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import profilePic from '../images/profile/Daan.jpg';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga'
 
 
 class Resume extends Component {
+
+openProjectsFromResume (project) {
+  ReactGA.event({
+      category: 'KoolIT site click',
+      action: 'Open project from resume',
+      label: project
+  })
+}
+
   render() {
 
 	const { t } = this.props;
@@ -194,7 +204,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Automation Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Zenly</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Zenly')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -207,7 +217,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Transavia</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Transavia')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -220,7 +230,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Rabobank</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Rabobank')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -233,7 +243,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Ahold Delhaize</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('AH')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -246,7 +256,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer / Scrum Masteer</h3>
     <h4 className="vertical-timeline-element-subtitle">FedEx</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('FedEx')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -259,7 +269,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">TNT</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('TNT')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -285,7 +295,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Randstad</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Randstad')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -298,7 +308,7 @@ class Resume extends Component {
   >
     <h3 className="vertical-timeline-element-title">Test coordinator</h3>
     <h4 className="vertical-timeline-element-subtitle">Ministerie van Veiligheid en Justitie</h4>
-     <a href="/projects"><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('DJI')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement

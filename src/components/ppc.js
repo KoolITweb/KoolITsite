@@ -12,16 +12,16 @@ function importAll(r) {
 }
 
 const imageDescription = [
-    "sheet 1",
-    "sheet 2",
-    "sheet 3",
-    "sheet 4",
-    "sheet 5",
-    "sheet 6",
-    "sheet 7",
-    "sheet 8",
-    "sheet 9",
-    "sheet 10"
+    "Current activities",
+    "Software quality pyramid",
+    "Plot to the canvas",
+    "Imagine IT",
+    "BUILD IT",
+    "RUN IT",
+    "(IM)PROVE IT",
+    "PROCESS",
+    "Take action",
+    "More information"
 ]
 
 const imageText = [
@@ -38,6 +38,7 @@ const imageText = [
 ]
 
 const ImageURL = [
+  images['write_current_activities.png'],
   images['qualityPyramid.png'],
   images['ppcModel.png'],
   images['imagine.png'],
@@ -45,9 +46,8 @@ const ImageURL = [
   images['run.png'],
   images['improve.png'],
   images['process.png'],
-  images['process.png'],
   images['practiceResult.jpg'],
-  images['practiceResult.jpg']
+  images['contact_for_info_ppc.png']
 ]
 
 
@@ -206,7 +206,7 @@ render() {
          <div className="ppcPage">
             <div className="ppcHeader">
             <h1 style={{fontWeight: "bold"}}>Product Practices Canvas</h1>
-            <p>{t('ppc_intro')}</p>
+            <p style={{fontWeight: "bold", fontSize: "16.10px"}}>{t('ppc_intro')}</p>
                 </div>
                 <div id="gallery-container" ref={this.myImage}>
                     {ImgItem}

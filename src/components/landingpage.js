@@ -3,8 +3,19 @@ import { Grid, Cell } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
 import profilePic from '../images/profile/avataaars.png'
 import earth from '../images/earth1.png';
+import ReactGA from 'react-ga'
+
 
 class Landing extends Component{
+
+openURLLink (urlName) {
+  ReactGA.event({
+      category: 'KoolIT site click',
+      action: 'Open url from homepage',
+      label: urlName
+  })
+}
+
 	render() {
 
 	    const { t } = this.props;
@@ -33,17 +44,17 @@ class Landing extends Component{
 						<div className="social-links">
 
 							{/* linkedIn */}
-							<a href="https://www.linkedin.com/in/daan-koolman/" rel="noopener noreferrer" target="_blank">
+							<a href="https://www.linkedin.com/in/daan-koolman/" rel="noopener noreferrer" target="_blank" onClick={(event) => this.openURLLink('LinkedIn')}>
 								<i className="fa fa-linkedin-square" aria-hidden="true" />
 							</a>
 
 							{/* Github */}
-							<a href="https://github.com/KoolITweb/KoolITsite" rel="noopener noreferrer" target="_blank">
+							<a href="https://github.com/KoolITweb/KoolITsite" rel="noopener noreferrer" target="_blank" onClick={(event) => this.openURLLink('Github')}>
 								<i className="fa fa-github-square" aria-hidden="true" />
 							</a>
 
 							{/* PPC */}
-							<a href="https://productpracticescanvas.org/" rel="noopener noreferrer" target="_blank">
+							<a href="https://productpracticescanvas.org/" rel="noopener noreferrer" target="_blank" onClick={(event) => this.openURLLink('PPC')}>
 								<i className="fa fa-globe" aria-hidden="true">
 									<a style={{ fontSize:'20px', color: 'white', fontWeight: 'bold' }}> PPC</a>
 								</i>

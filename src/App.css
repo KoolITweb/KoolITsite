@@ -18,9 +18,10 @@
 	margin: 200px;
 }
 
-/*.mdl-layout {
+/*below mdl-layout breaks test-page*/
+.mdl-layout {
 	height: fit-content !important;
-}*/
+}
 
 .mdl-layout__header-row .mdl-navigation__link {
 	font-weight: bold;
@@ -135,7 +136,6 @@ translate_option{
 	top: -10%;
 }
 
-
 @keyframes move-background {
   from {
 		-webkit-transform: translate3d(0px, 0px, 0px);
@@ -238,6 +238,10 @@ translate_option{
 	border-radius: 15px;
 }
 
+.translate_option{
+    cursor: pointer;
+}
+
 
 /*projects-page styling*/
 
@@ -332,6 +336,8 @@ translate_option{
   padding: 0.5rem;
   flex: 1 1 auto;
   text-align: center;
+  color: rgb(0, 0, 0, 0.75);
+  font-weight: bold;
 }
 .Card-explore {
   opacity: 0;
@@ -928,7 +934,7 @@ div.item *{
 #container-gallery {
 	margin: 4% auto;
 	width: 210px;
-	height: 140px;
+	height: 375px;
 	position: relative;
 	perspective: 1000px;
 	z-index: 2;
@@ -1070,21 +1076,28 @@ div.item *{
 
 .ppcHeader {
 	background-color: black;
-    width: 90%;
+    width: 87%;
 	opacity: .7;
-    border-radius: 15px;
     margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 3;
-    box-shadow: 0px 0px 1px 1px rgba(150,150,150);
     color: white;
 }
 
+.gallery-img-container h2 p{
+    font-size: 16.10px;
+    color: white;
+}
 
+.gallery-img-container h2 span{
+    color: white;
+}
 
-
+.slideshow-button, .fullscreen-button {
+    font-size: 15px !important;
+}
 
 /*background everywhere*/
 
