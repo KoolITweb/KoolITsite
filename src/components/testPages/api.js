@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { AwesomeButton } from 'react-awesome-button';
 import { withNamespaces } from 'react-i18next';
 import construction from '../../images/under_construction.png';
 
 
-function AButton() {
-  return <AwesomeButton type="primary">Button</AwesomeButton>;
-}
 
 class TestApi extends Component {
 
@@ -15,13 +11,9 @@ class TestApi extends Component {
 	const { t } = this.props;
 
     return(
-      <div class="test-page">
-
-        <AButton>TEST</AButton>
-
+      <div class="test-api">
  		<div>
-             <img className="underConstruction" src={construction}/>
-             <AButton>BACK TO HOMEPAGE</AButton>
+             <img className="underConstruction" src={construction} style={{align:"center", marginLeft: "30%", marginTop: "5%"}} alt=""/>
         </div>
 
       </div>

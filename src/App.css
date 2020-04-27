@@ -933,8 +933,8 @@ div.item *{
 
 #container-gallery {
 	margin: 4% auto;
-	width: 210px;
-	height: 375px;
+	width: 250px;
+	height: 450px;
 	position: relative;
 	perspective: 1000px;
 	z-index: 2;

@@ -35,7 +35,7 @@ import ReactGA from 'react-ga';
                             <Link to="/resume">{t('menu_resume')}</Link>
                             <Link to="/projects">{t('menu_projects')}</Link>
                             <Link to="/ppc">PPC</Link>
-                            <Link to="/test-page">{t('menu_test')}</Link>
+                            <Link to="/test">{t('menu_test')}</Link>
                             <Link to="/contact">{t('menu_contact')}</Link>
                             <button className="translate_option" onClick={() => changeLanguage('nl')} style={{ backgroundColor: "black", borderColor: "transparent", borderRadius: "50%", fontSize: "135%", marginLeft: "100px" }}>NL</button>
                             <button className="translate_option" onClick={() => changeLanguage('en')} style={{ backgroundColor: "black", borderColor: "transparent", borderRadius: "50%", fontSize: "135%" }}>EN</button>

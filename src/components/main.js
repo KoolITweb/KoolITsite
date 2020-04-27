@@ -24,7 +24,7 @@ const Main = ()=> (
 	  <Route exact path="/projects" component={Projects} />
 	  <Route exact path="/contact" component={Contact} />
 	  <Route exact path="/ppc" component={Ppc} />
-	  <Route exact path="/test-page" component={Test} />
+	  <Route exact path="/test" component={Test} />
 	  <Route exact path="/test/api" component={Api} />
 	  <Route exact path="/test/dropdown" component={Dropdown} />
 	  <Route exact path="/test/textfields" component={Textfields} />
