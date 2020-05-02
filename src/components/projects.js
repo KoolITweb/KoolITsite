@@ -55,8 +55,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://fr.jobs.game/images/clients/logo/P/3895.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> Project details and activities</span></div>
-                        <button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
+                        <button class="Card-button">{t('project_click_here')}</button></a>
 
                     <a class="Card" onClick={() => this.openGallery('Transavia')} id="card-Transavia">
                         <div class="Card-thumb">
@@ -66,8 +66,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://www.vanadengage.com/wp-content/uploads/2018/11/Transavia-vierkant_klein-900x.png)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> Project details and activities</span></div>
-                        <button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div>
+                        <button class="Card-button">{t('project_click_here')}</button></a>
 
                     <a class="Card" onClick={() => this.openGallery('Rabobank')} id="card-Rabobank">
                         <div class="Card-thumb">
@@ -77,8 +77,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://radar.avrotros.nl/fileadmin/user_upload/rabobank-reactie-23-09-2019.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> Project details and activities</span></div>
-                        <button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
+                        <button class="Card-button">{t('project_click_here')}</button></a>
 
                  </div>
                  <div class="Grid-row">
@@ -91,8 +91,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://sollicitatieblog.nl/wp-content/uploads/2019/04/ahold-delhaize-logo.png)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> Project details and activities</span></div>
-                        <button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
+                        <button class="Card-button">{t('project_click_here')}</button></a>
 
                     <a class="Card" onClick={() => this.openGallery('FedEx')} id="card-FedEx">
                         <div class="Card-thumb">
@@ -102,8 +102,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://www.reybex.com/wp-content/uploads/2019/07/fedex_reybex_schnittstelle.gif)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>Project details and activities</span></div>
-                        <button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div>
+                        <button class="Card-button">{t('project_click_here')}</button></a>
 
                    <a class="Card" onClick={() => this.openGallery('TNT')} id="card-TNT">
                         <div class="Card-thumb">
@@ -113,7 +113,7 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://sc02.alicdn.com/kf/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ/936445268/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>Project details and activities</span></div><button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button></a>
 
                   </div>
                   <div class="Grid-row">
@@ -126,7 +126,7 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://rw-poarivierenland.nl/wp-content/uploads/2018/03/randstad-uitzendbureau.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>Project details and activities</span></div><button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button></a>
 
                    <a class="Card" onClick={() => this.openGallery('DJI')} id="card-DJI">
                         <div class="Card-thumb">
@@ -136,7 +136,7 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://www.strafrechtketen.nl/binaries/medium/content/gallery/strafrechtketen/content-afbeeldingen/2019/justitie-en-veiligheid-bulletin.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> Project details and activities</span></div><button class="Card-button">Click here</button></a>
+                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button></a>
 
                 </div>
             </section>
@@ -155,9 +155,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.rabobank.nl/images/huis%20waarde%20rgb%20tr2_291051499.svg)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project1_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url(https://www.steadylearner.com/static/images/code/cypress.png)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url(https://d-media.nl/sites/default/files/styles/header_visual_small/public/blog/googleanalytics-2.png.jpg?itok=G2WQej1g)"}}></div>
@@ -198,9 +198,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://foodretaildesign.nl/wp-content/uploads/2016/11/plattegrond_AH_XL_Purmerend.jpg)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project2_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/WIu5_dJZQQKDCxGXR9bZeOsGls5i0t6S_-X8gxIx6LOkLRLIo1zk4RMTUKNRPoQe--x73R3uSZQIP9onvslVG6WAjfmksPPqzsyf8-jnudO0yJXNzOLgE1Ff_pYmch5t4OiNc1hU_w)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url(https://cdn.rc-static.com/images/ProductImages/ScaleProducts/A4932025_I2.jpg)"}}></div>
@@ -233,9 +233,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.supplychain247.com/images/article/fedex_tnt_executives_provide_insights_wide_image.jpg)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project3_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url(https://www.steadylearner.com/static/images/code/cypress.png)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url(https://d-media.nl/sites/default/files/styles/header_visual_small/public/blog/googleanalytics-2.png.jpg?itok=G2WQej1g)"}}></div>
@@ -276,9 +276,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.blue-growth.org/Blue_Growth_Technology_Innovation/AmphiMax/Pictures_AmphiMax/TNT_Shipment_74096817_Track_Trace_Chris_Bury_Blackburn_Concrete_Vibrator.jpg)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project4_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url(https://www.runscope.com/static/img/public/share-image.png)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url(https://d-media.nl/sites/default/files/styles/header_visual_small/public/blog/googleanalytics-2.png.jpg?itok=G2WQej1g)"}}></div>
@@ -319,9 +319,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/jBYkCy0EHCfXrBxlt5gjtkyCgj4yrD2eEel3JXUjbxARj1M2TKY9svc51xHUQupm-FbGfoQp8U1zrXSzZyI-HLeNKWMpGAxD3F2svox1cETg94wl9vDcfzC-lt7AZ_qM6VWbdJY9W1o)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project5_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url(https://skyose.com/wp-content/uploads/2018/10/SoapUI-logo.png)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url(https://kevinekline.com/wp-content/uploads/2010/06/toad-01.jpg)"}}></div>
@@ -354,9 +354,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://nos.nl/data/image/2019/11/05/590326/2048x1152.jpg)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project6_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url(https://skyose.com/wp-content/uploads/2018/10/SoapUI-logo.png)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url(https://mark.trademarkia.com/logo-images/progress-software-corporation/progress-sonic-77217028.jpg)"}}></div>
@@ -381,9 +381,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/k0i2kJAY76gXZg9EQQY9b_TQIaNMeVSCbmLo9Q43WcAlZPjXTHiMbg3OGIYX3UunD9WrmC1cmEzS-TGAKSeYXF-JI_afIVLmu4Mj4OppMw5l8Vj0TDGoeiCWZ01rbnEv_WdUE_fJst7sfMHhLOU)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project7_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
@@ -408,9 +408,9 @@ closeAll () {
                     </div>
                     <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/k0i2kJAY76gXZg9EQQY9b_TQIaNMeVSCbmLo9Q43WcAlZPjXTHiMbg3OGIYX3UunD9WrmC1cmEzS-TGAKSeYXF-JI_afIVLmu4Mj4OppMw5l8Vj0TDGoeiCWZ01rbnEv_WdUE_fJst7sfMHhLOU)"}}></div>
                 </div>
-                    	<h1 class="projects_header">Activities</h1>
+                    	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project8_results')}</p>
-                    	<h1 class="projects_header">Tooling</h1>
+                    	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
                     <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>

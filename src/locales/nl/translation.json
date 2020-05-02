@@ -9,6 +9,10 @@
   "menu_home": "Home",
   "project_logo_hover": "Klik het logo",
   "project_gallery_close": "Sluit pagina",
+  "project_details_activities": "Project details en activiteiten",
+  "project_activities": "Activiteiten",
+  "project_click_here": "Klik hier",
+  "project_tools": "Tools",
   "project1_desc": "•\t Test automatisering (CI/CD) opgezet voor DevOps teams (Appium, Cucumber + Protractor, Cypress, CodeceptJS, RestAssured, WebdriverIO en Gatling).\n•\tTeam test sessies en pair testing geïntroduceerd om zo product en kwaliteits bewustzijn te creëren.\n•\tIk heb een focus op data en resultaten geïntroduceerd via het gebruik van Google Analytics en het opzetten van een complete data structuur en bijbehorende dashboards. Data werd gebruikt voor refinements, test risico afwegingen en ontwikkel keuzes (Google Analytics, A/B testing, technical statistieken in Kibana).\n•\tRetrospectives geleid.\n•\tHeb het gebruik van impact mapping opgezet om zo focus te krijgen op een duidelijk project doel.\n•\tIk heb diverse teams geholpen bij het opzetten van data dashboards (technische data en klant data).\n•\tHet user story template aangepast om zo duidelijke verwachtingen en criteria naar voren te laten komen die input geven voor het meten van voortgang, test en ontwikkeling. \n•\tEen kwaliteits visie voor de afdeling gerealiseerd \n",
   "project2_desc": "•\tAutomatische testen opgezet in Java (Selenium) en geïntegreerd in Jenkins voor de nieuw gebouwde front-end in Outsystems\n•\tAutomatische testen opgezet in PL/SQL (unit tests) voor het testen van de database.\n•\tIk heb de retrospectives geupdate om zo te teams zichzelf te blijven laten verbeteren\n•\tPair testen geïntroduceerd om zo de ontwikkelaars een beter bewustzijn van testen bij te brengen\n•\tHet release proces geoptimaliseerd door meer verantwoordelijkheid voor kwaliteit bij het team te leggen in plaats van meerdere mensen documenten te laten afvinken.\n•\tSimpele en makkelijk te gebruiken testtemplates geïntroduceerd\n",
   "project3_desc": "•\tTest automatisering opzet (CI/CD) voor de belangrijkste business features op een BDD manier.\n•\tDemo sessies gehouden voor de hele afdeling, hierin werd sprintvoorgang gedeeld en feedback vanuit het publiek opgehaald.\n•\tTeam test sessies opgezet om het team bewuster te maken van het belang van -en hoe te testen.\n•\tScrum bijeenkomsten geleid (Daily Standup, Retrospective, Refinement, Planning, Sprint review, Demo sessies, 3-amigo meetings, Quality guild)\n•\tEen voorspelbaar team neergezet, we wisten precies wat we per sprint konden opleveren en leverden dit ook\n•\tHet opvolgen van ten minste 2 retrospective punten neergezet om zo continue verbetering te waarborgen\n",
@@ -29,6 +33,7 @@
   "contact_skype": "daan_koolman@hotmail.com",
   "contact_mail": "daan@koolit.nl",
   "contact_prof_info": "-Lets make quality a matter of cause-",
+  "resume_projects_button": "Naar projecten pagina",
   "resume_function": "QA Engineer",
   "resume_profile": "Daan is kritisch, analytisch sterk, heeft oog voor detail en streeft naar succesvolle producten. Hij gebruikt (klant)data om de beste test aanpak te kiezen bepalen inclusief de balans tussen automatisch en handmatig testen. Daan werkt het liefst in een Agile omgeving waarbij hij door middel van kritische vragen kwaliteit tot een team effort maakt. Hij wordt graag uitgedaagd en probeert altijd nieuwe tools en technieken toe te passen. om zo te blijven leren. Alles wordt context driven toegepast en is gericht op resultaten. Daan werkt als freelancer.",
   "resume_address": "Amsterdam",
@@ -55,7 +60,7 @@
   "resume_add_act_desc2": "Presentatie over verzamelen van gebruikers gegevens en hoe deze toe te passen in je ontwikkel proces (focus op Google Analytics).",
   "resume_add_act_title3": "Medeorganisator Testlab Eurostar Software Test Conference",
   "resume_add_act_desc3": "Robot challenges, blackbox puzzels, security test challenges, games, bughunts en API test challenges opgezet en gefaciliteerd voor het Eurostar testlab.\nBemande het testlab voor 4 dagen op de conferentie.",
-  "resume_add_act_title4": "'Know your customer presentatie' op Testnet",
+  "resume_add_act_title4": "'Know your customer' presentatie op Testnet",
   "resume_add_act_desc4": "Presentatie over diverse manieren om relevante klantdata te verzamelen en hoe je deze in kan zetten in het software ontwikkel proces.",
   "resume_skill1": "Agile Ontwikkeling",
   "resume_skill2": "Test Automatisering",
@@ -86,20 +91,27 @@
   "ppc_sheet3": "Uitleg van de product practices canvas plaat",
   "ppc_sheet3_explanation": "Het canvas bevat 4 gebieden en het proces (de manier waarop) waarin gewerkt wordt. Ieder van de 4 gebieden staat voor een essientiele stap nodig voor de creatie van een succesvol product.",
   "ppc_sheet4": "Plot huidige activiteiten op het gebied IMAGINE IT",
-  "ppc_sheet4_explanation": "Plot cur IT",
+  "ppc_sheet4_explanation": "Welke van de huidige activiteiten, zoals op stickies gezet in het begin, worden gebruikt om een duidelijk doel te formuleren bij het bouwen van het product?",
   "ppc_sheet5": "Plot huidige activiteiten op het gebied BUILD IT",
-  "ppc_sheet5_explanation": "QA Engineer",
+  "ppc_sheet5_explanation": "Welke van de huidige activiteiten, zoals op stickies gezet in het begin, worden gebruikt om de juiste software te bouwen?",
   "ppc_sheet6": "Plot huidige activiteiten op het gebied  RUN IT",
-  "ppc_sheet6_explanation": "Tester",
+  "ppc_sheet6_explanation": "Welke van de huidige activiteiten, zoals op stickies gezet in het begin, worden gebruikt om de gebouwde software te beheren?",
   "ppc_sheet7": "Plot huidige activiteiten op het gebied (IM)PROVE IT",
-  "ppc_sheet7_explanation": "Agile Tester",
+  "ppc_sheet7_explanation": "Welke van de huidige activiteiten, zoals op stickies gezet in het begin, worden gebruikt om te gebouwde software te verbeteren?",
   "ppc_sheet8": "Plot huidige activiteiten op het PROCES",
-  "ppc_sheet8_explanation": "The canvas...",
+  "ppc_sheet8_explanation": "Welke van de huidige activiteiten, zoals op stickies gezet in het begin, worden toegepast in het proces waarin de software ontwikkeld wordt?",
   "ppc_sheet9": "Evalueer en bekijk waar je wil verbeteren",
-  "ppc_sheet9_explanation": "Plot cur IT",
+  "ppc_sheet9_explanation": "De Canvas is nu volledig gevuld met de huidige activiteiten, het team kan nu goed nu bediscussiëren of ze iets op vinden vallen en waar ze graag verbeteringen zouden willen doorvoeren.",
   "ppc_sheet10": "Beslis over benodigde acties",
-  "ppc_sheet10_explanation": "In the area of attention the belonging practices will be shown, the practices chosen for improvement are explained on the back of the card and on the site more information can be found",
+  "ppc_sheet10_explanation": "In de gebieden waar het team actie/verbetering wil ondernemen worden practice kaarten voor verbeteringen getoond. De facilitatoren leggen de kaarten uit en op de voorkant van elke kaart staat de techniek/methode en op de achterkant is deze uitgelegd. Tevens kan er op de site meer informatie meer informatie over de practice gevonden worden. Het team kiest nu hun verbeteringpunten uit.",
   "ppc_sheet11": "www.productpracticescanvas.org",
   "ppc_sheet11_explanation": "Indien je geïnteresseerd bent of je wilt nog wat meer te weten komen over het model, ga dan naar www.productpracticescanvas.org of neem contact op met Daan Koolman of Pascal Dufour",
   "contact_me_title": "Neem contact op via:"
 }
+
+
+
+
+
+
+

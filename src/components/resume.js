@@ -204,7 +204,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Automation Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Zenly</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Zenly')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Zenly')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -217,7 +217,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Transavia</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Transavia')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Transavia')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -230,7 +230,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Rabobank</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Rabobank')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Rabobank')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -243,7 +243,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Ahold Delhaize</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('AH')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('AH')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -256,7 +256,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer / Scrum Masteer</h3>
     <h4 className="vertical-timeline-element-subtitle">FedEx</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('FedEx')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('FedEx')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -269,20 +269,20 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">TNT</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('TNT')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('TNT')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'white', color: 'black' }}
     contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="06/2015 - present"
+    date={t('resume_till_now')}
     iconStyle={{ background: 'white', color: 'black' }}
     icon={<img src="https://media-exp1.licdn.com/dms/image/C4D0BAQH4NGVYVG0akQ/company-logo_100_100/0?e=1590624000&v=beta&t=A-E6dSyNstqxfCJBM1VKhdvF4CHNnzZREkMaxyfKsdY" style={{width:"100%", height:"100%", borderRadius: "15px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">KoolIT</h4>
-	<p>Started of freelance career</p>
+	<p>Freelance start</p>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -295,7 +295,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Randstad</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Randstad')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Randstad')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement
@@ -308,7 +308,7 @@ openProjectsFromResume (project) {
   >
     <h3 className="vertical-timeline-element-title">Test coordinator</h3>
     <h4 className="vertical-timeline-element-subtitle">Ministerie van Veiligheid en Justitie</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('DJI')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>Go to projects page</Button></a>
+     <a href="/projects" onClick={(event) => this.openProjectsFromResume('DJI')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>
 
   <VerticalTimelineElement

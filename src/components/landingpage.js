@@ -40,7 +40,7 @@ openURLLink (urlName) {
 						<div className='koolit-banner'>
 							<h1>{t('main_function')}</h1>
 							<hr/>
-							<p>Test Automation | Quality Process | Software Testing</p>
+							<p>{t('main_qualities')}</p>
 						<div className="social-links">
 
 							{/* linkedIn */}
