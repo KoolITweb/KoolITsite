@@ -86,7 +86,7 @@
   "ppc_intro": "The Product Practice Canvas helps a team or organisation to effectively reflect on their current software delivery process and offers practices to improve in the parts needed. Practices are action tools to deliberately get a certain result. Each practice has been developed to improve a specific goal or mitigate a risk/problem. When using the model you start from your current situation and step by step an overview of the desired situation will be created along with practices to implement. The slideshow below walks you through the process:",
   "ppc_sheet1": "What do you do to create a successful product?",
   "ppc_sheet1_explanation": "Every participant writes down all the things they do in order to create 'A SUCCESSFUL PRODUCT' on stickies",
-  "ppc_sheet2": "Plotting practices to the pyramid",
+  "ppc_sheet2": "Plotting practices to the quality pyramid",
   "ppc_sheet2_explanation": "Here all the activities the participants wrote on stickies are plotted on the quality pyramid of Goijko, this is done together with the facilitator ",
   "ppc_sheet3": "Explain the product practices canvas",
   "ppc_sheet3_explanation": "The canvas contains 4 areas and the process which it all fits in to",
@@ -106,5 +106,7 @@
   "ppc_sheet10_explanation": "In the area of attention the belonging practices will be shown, the practices chosen for improvement are explained on the back of the card and on the site more information can be found",
   "ppc_sheet11": "www.productpracticescanvas.org",
   "ppc_sheet11_explanation": "If you are interested or want to know more about the model you can go to www.productpracticescanvas.org, or reach out to Daan Koolman or Pascal Dufour ",
+  "ppc_play": "Play slide show",
+  "ppc_full_screen":"Full screen",
   "contact_me_title": "Contact me"
 }
