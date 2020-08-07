@@ -10,16 +10,24 @@ import profilePic from '../images/profile/Daan.jpg';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga'
 
+const company_logos = importAll(require.context('../images/organizations', false, /\.(png|jpe?g)$/));
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
 
 class Resume extends Component {
 
-openProjectsFromResume (project) {
-  ReactGA.event({
-      category: 'KoolIT site click',
-      action: 'Open project from resume',
-      label: project
-  })
-}
+  openProjectsFromResume (project) {
+    ReactGA.event({
+        category: 'KoolIT site click',
+        action: 'Open project from resume',
+        label: project
+    })
+  }
 
   render() {
 
@@ -55,7 +63,7 @@ openProjectsFromResume (project) {
             </div>
      <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%' }}>
               <img
-                src="https://www.myamcat.com/blog/wp-content/uploads/2019/02/Text-placeholder-3.png"
+                src={company_logos['cv-skills.png']}
                 alt="skills"
                 style={{height: '75%', width: '100%', borderRadius: '10px' }}
                  />
@@ -99,7 +107,7 @@ openProjectsFromResume (project) {
 </div>
 <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%' }}>
               <img
-                src="https://www.arcgis.com/sharing/rest/content/items/6c036c09c490450db100cbf867c7688a/resources/1571940616424.png?w=3340"
+                src={company_logos['cv-education.png']}
                 alt="Education"
                 style={{height: '75%', width: '100%', borderRadius: '10px' }}
                  />
@@ -200,7 +208,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date={t('resume_till_now')}
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://d2.alternativeto.net/dist/icons/zenly_163165.png?width=200&height=200&mode=crop&upscale=false" style={{width:"100%", height:"100%", borderRadius: "20px"}} />}
+    icon={<img src={company_logos['cv-zenly-logo.png']} style={{width:"100%", height:"100%", borderRadius: "20px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Automation Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Zenly</h4>
@@ -213,7 +221,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="03/2020 - 04/2020"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://www.bagagekosten.nl/wp-content/uploads/2019/03/transavia-featured.png" style={{width:"100%", height:"100%", borderRadius: "20px"}} />}
+    icon={<img src={company_logos['cv-transavia-logo.png']} style={{width:"100%", height:"100%", borderRadius: "20px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Transavia</h4>
@@ -226,7 +234,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="02/2018 - 01/2020"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://voorelkaarzwolle.nl/wp-content/uploads/2016/10/Rabobank-logo.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-rabo-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Rabobank</h4>
@@ -239,7 +247,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="04/2017 - 02/2018"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://d3heu4nageqwg5.cloudfront.net/app/uploads/2019/05/attachment-ahold-delhaize-logo-768x543.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-ah-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Ahold Delhaize</h4>
@@ -252,7 +260,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="07/2016 - 04/2017"
     iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
-    icon={<img src="https://www.nettl.com/nl/wp-content/uploads/2019/06/fedex-logo.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-fedex-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer / Scrum Master</h3>
     <h4 className="vertical-timeline-element-subtitle">FedEx</h4>
@@ -265,7 +273,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="06/2015 - 06/2016"
     iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
-    icon={<img src="https://toppng.com/uploads/preview/tnt-express-logo-vector-11573945216v99jrefohz.png" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-tnt-logo.png']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">TNT</h4>
@@ -278,7 +286,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date={t('resume_till_now')}
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://media-exp1.licdn.com/dms/image/C4D0BAQH4NGVYVG0akQ/company-logo_100_100/0?e=1590624000&v=beta&t=A-E6dSyNstqxfCJBM1VKhdvF4CHNnzZREkMaxyfKsdY" style={{width:"100%", height:"100%", borderRadius: "15px"}} />}
+    icon={<img src={company_logos['cv-koolit-logo.jpeg']} style={{width:"100%", height:"100%", borderRadius: "15px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">KoolIT</h4>
@@ -291,7 +299,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="10/2013 - 05/2015"
     iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
-    icon={<img src="https://nathansgibson.org/wp-content/uploads/2015/05/Randstad-logo.jpg" style={{width:"100%", height:"105%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-randstad-logo.png']} style={{width:"100%", height:"105%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">QA Engineer</h3>
     <h4 className="vertical-timeline-element-subtitle">Randstad</h4>
@@ -304,7 +312,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="04/2012 - 10/2013"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://maverickgedrag.nl/wp-content/uploads/2019/04/Ministerie-van-Justitie-en-Veiligheid-Maverick-gedragsverandering-nudging-700x450.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-minjus-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">Test coordinator</h3>
     <h4 className="vertical-timeline-element-subtitle">Ministerie van Veiligheid en Justitie</h4>
@@ -317,7 +325,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="11/2011 - 05/2015"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://media-exp1.licdn.com/dms/image/C4D0BAQEH535lQVW0ag/company-logo_100_100/0?e=1590624000&v=beta&t=jNL9Ol0gBMWpMjGoqG-Nz2XMjO4-A8DBi5VKtd_FHe8" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-cerios-logo.png']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">Testconsultant</h3>
     <h4 className="vertical-timeline-element-subtitle">Cerios</h4>
@@ -330,7 +338,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="08/2010 - 01/2012"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://www.ebusco.nl/wp-content/uploads/ING-Bank-provides-growth-capital-to-Ebusco.jpeg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-ing-logo.png']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">Software Tester</h3>
     <h4 className="vertical-timeline-element-subtitle">ING</h4>
@@ -343,7 +351,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="05/2010 - 07/2010"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://resultfactory.blob.core.windows.net/marqit-it-public/suppliers/logo-adp.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-adp-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">Software Tester</h3>
     <h4 className="vertical-timeline-element-subtitle">ADP</h4>
@@ -356,7 +364,7 @@ openProjectsFromResume (project) {
     contentArrowStyle={{ borderRight: '7px solid  white' }}
     date="04/2010 - 11/2011"
     iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src="https://pbs.twimg.com/profile_images/1174260337891315716/DMLZuC8E_400x400.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+    icon={<img src={company_logos['cv-qquest-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
     <h3 className="vertical-timeline-element-title">Test Consultant</h3>
     <h4 className="vertical-timeline-element-subtitle">Qquest</h4>
