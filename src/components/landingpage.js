@@ -56,7 +56,7 @@ openURLLink (urlName) {
 							{/* PPC */}
 							<a href="https://productpracticescanvas.org/" rel="noopener noreferrer" target="_blank" onClick={(event) => this.openURLLink('PPC')}>
 								<i className="fa fa-globe" aria-hidden="true">
-									<a style={{ fontSize:'20px', color: 'white', fontWeight: 'bold' }}> PPC</a>
+									<a className="ppc-icon-text" style={{ fontSize:'20px', color: 'white', fontWeight: 'bold' }}> PPC</a>
 								</i>
 							</a>
 

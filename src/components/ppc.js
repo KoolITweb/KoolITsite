@@ -12,16 +12,17 @@ function importAll(r) {
 }
 
 const imageDescription = [
-    "Current activities",
-    "Software quality pyramid",
-    "Plot to the canvas",
-    "Imagine IT",
-    "BUILD IT",
-    "RUN IT",
-    "(IM)PROVE IT",
-    "PROCESS",
-    "Take action",
-    "More information"
+    "sheet1_explanation",
+    "sheet2_explanation",
+    "sheet3_explanation",
+    "sheet4_explanation",
+    "sheet5_explanation",
+    "sheet6_explanation",
+    "sheet7_explanation",
+    "sheet8_explanation",
+    "sheet9_explanation",
+    "sheet10_explanation",
+    "sheet11_explanation"
 ]
 
 const imageText = [
@@ -34,11 +35,12 @@ const imageText = [
     "sheet7",
     "sheet8",
     "sheet9",
-    "sheet10"
+    "sheet10",
+    "sheet11"
 ]
 
 const ImageURL = [
-  images['write_current_activities.png'],
+  images['write_current_acitivities.png'],
   images['qualityPyramid.png'],
   images['ppcModel.png'],
   images['imagine.png'],
@@ -47,7 +49,8 @@ const ImageURL = [
   images['improve.png'],
   images['process.png'],
   images['practiceResult.jpg'],
-  images['contact_for_info_ppc.png']
+  images['contact_for_info_ppc.png'],
+  images['logo.png']
 ]
 
 
@@ -67,7 +70,7 @@ class Ppc extends Component {
     //this.myImage = React.createRef();
   }
   slideTransition = (slider) => {
-    if(this.state.currentIndex==9) {
+    if(this.state.currentIndex==10) {
       this.left=0;
       slider.style.left = this.left+'px';
     }
@@ -85,11 +88,11 @@ class Ppc extends Component {
       if(this.state.slideshow===true){
 
         var slider = document.getElementById("slider-img-container");
-        var index = (this.state.currentIndex === 9 ) ? 0 : this.state.currentIndex+1;
+        var index = (this.state.currentIndex === 10 ) ? 0 : this.state.currentIndex+1;
 
         this.slideTransition(slider);
 
-        this.setState((prevState)=>({currentIndex : prevState.currentIndex===9 ? 0 : prevState.currentIndex+1}))
+        this.setState((prevState)=>({currentIndex : prevState.currentIndex===10 ? 0 : prevState.currentIndex+1}))
 
       }
 
@@ -161,20 +164,20 @@ updateImage = (event ) => {
 
 prevHandler =(event) => {
   var slider = document.getElementById("slider-img-container");
-  var index = (this.state.currentIndex === 0 ) ? 9 : this.state.currentIndex-1;
+  var index = (this.state.currentIndex === 0 ) ? 10 : this.state.currentIndex-1;
 
   this.slideTransition(slider);
 
-  this.setState((prevState)=>({currentIndex : prevState.currentIndex===0 ? 9 : prevState.currentIndex-1}))
+  this.setState((prevState)=>({currentIndex : prevState.currentIndex===0 ? 10 : prevState.currentIndex-1}))
 }
 
 nextHandler =(event) => {
   var slider = document.getElementById("slider-img-container");
-  var index = (this.state.currentIndex === 9 ) ? 0 : this.state.currentIndex+1;
+  var index = (this.state.currentIndex === 10 ) ? 0 : this.state.currentIndex+1;
 
   this.slideTransition(slider);
 
-  this.setState((prevState)=>({currentIndex : prevState.currentIndex===9 ? 0 : prevState.currentIndex+1}))
+  this.setState((prevState)=>({currentIndex : prevState.currentIndex===10 ? 0 : prevState.currentIndex+1}))
 }
 
 render() {
@@ -189,13 +192,13 @@ render() {
   <div className="gallery-img-container">
     <img className="gallery-img" src={ImageURL[i]}/>
     <h2>
-    <span>{imageDescription[i]}</span>
-    <p>{t('ppc_'+imageText[i])}</p></h2>
+    <span>{t('ppc_'+imageText[i])}</span>
+    <p>{t('ppc_'+imageDescription[i])}</p></h2>
     <div className= "prev-carousel-button" onClick={this.prevHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9664;</div>
     <div id="carousel-dot-container">{carouselDots}</div>
     <div className= "next-carousel-button" onClick={this.nextHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9654;</div>
-    { this.state.slideshow===false ? <button className="slideshow-button" onClick={this.slideshowHandler}>Play slide show &#9654;</button> : <button className="slideshow-button" onClick={this.slideshowHandler}>&#9646;&#9646;</button> }
-    { this.state.fullscreen===false ? <button className="fullscreen-button" onClick={this.enterfullScreen}>Full screen &#9635;</button> : <button className="fullscreen-button" onClick={this.exitfullScreen}>&#9635;</button> }
+    { this.state.slideshow===false ? <button className="slideshow-button" onClick={this.slideshowHandler}>{t('ppc_play')} &#9654;</button> : <button className="slideshow-button" onClick={this.slideshowHandler}>&#9646;&#9646;</button> }
+    { this.state.fullscreen===false ? <button className="fullscreen-button" onClick={this.enterfullScreen}>{t('ppc_full_screen')} &#9635;</button> : <button className="fullscreen-button" onClick={this.exitfullScreen}>&#9635;</button> }
 
      </div>
 

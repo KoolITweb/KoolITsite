@@ -56,7 +56,8 @@ closeAll () {
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
                         <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button></a>
+                        <button class="Card-button">{t('project_click_here')}</button>
+                    </a>
 
                     <a class="Card" onClick={() => this.openGallery('Transavia')} id="card-Transavia">
                         <div class="Card-thumb">
@@ -67,7 +68,8 @@ closeAll () {
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
                         <div class="Card-explore"><span>{t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button></a>
+                        <button class="Card-button">{t('project_click_here')}</button>
+                    </a>
 
                     <a class="Card" onClick={() => this.openGallery('Rabobank')} id="card-Rabobank">
                         <div class="Card-thumb">
@@ -78,7 +80,8 @@ closeAll () {
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
                         <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button></a>
+                        <button class="Card-button">{t('project_click_here')}</button>
+                    </a>
 
                  </div>
                  <div class="Grid-row">
@@ -92,7 +95,8 @@ closeAll () {
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
                         <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button></a>
+                        <button class="Card-button">{t('project_click_here')}</button>
+                    </a>
 
                     <a class="Card" onClick={() => this.openGallery('FedEx')} id="card-FedEx">
                         <div class="Card-thumb">
@@ -103,7 +107,8 @@ closeAll () {
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
                         <div class="Card-explore"><span>{t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button></a>
+                        <button class="Card-button">{t('project_click_here')}</button>
+                    </a>
 
                    <a class="Card" onClick={() => this.openGallery('TNT')} id="card-TNT">
                         <div class="Card-thumb">
@@ -113,7 +118,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://sc02.alicdn.com/kf/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ/936445268/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button></a>
+                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button>
+                   </a>
 
                   </div>
                   <div class="Grid-row">
@@ -126,7 +132,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://rw-poarivierenland.nl/wp-content/uploads/2018/03/randstad-uitzendbureau.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button></a>
+                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button>
+                   </a>
 
                    <a class="Card" onClick={() => this.openGallery('DJI')} id="card-DJI">
                         <div class="Card-thumb">
@@ -136,7 +143,8 @@ closeAll () {
                             <div class="Card-image" style={{backgroundImage: "url(https://www.strafrechtketen.nl/binaries/medium/content/gallery/strafrechtketen/content-afbeeldingen/2019/justitie-en-veiligheid-bulletin.jpg)"}}></div>
                         </div>
                         <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button></a>
+                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button>
+                   </a>
 
                 </div>
             </section>
@@ -376,20 +384,20 @@ closeAll () {
                 	<p class="projects_text">{t('project7_desc')}</p>
                 <div class="Gallery-images">
                     <div class="Gallery-left">
-                        <div class="Gallery-image" style={{backgroundImage: "url()", width: "15rem", height: "9.5rem"}}></div>
-                        <div class="Gallery-image" style={{backgroundImage: "url()", width: "15rem", height: "9.5rem"}}></div>
+                        <div class="Gallery-image" style={{backgroundImage: "url(https://pbs.twimg.com/media/ETADqhSXgAAIZsN.png)", width: "15rem", height: "9.5rem"}}></div>
+                        <div class="Gallery-image" style={{backgroundImage: "url(https://img.freepik.com/vecteurs-libre/personne-qui-travaille-appui_1212-37.jpg?size=338&ext=jpg)", width: "15rem", height: "9.5rem"}}></div>
                     </div>
-                    <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/k0i2kJAY76gXZg9EQQY9b_TQIaNMeVSCbmLo9Q43WcAlZPjXTHiMbg3OGIYX3UunD9WrmC1cmEzS-TGAKSeYXF-JI_afIVLmu4Mj4OppMw5l8Vj0TDGoeiCWZ01rbnEv_WdUE_fJst7sfMHhLOU)"}}></div>
+                    <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.dutchnews.nl/wpcms/wp-content/uploads/2020/02/Transavia_3-e1581498148756.jpg)"}}></div>
                 </div>
                     	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project7_results')}</p>
                     	<h1 class="projects_header">{t('project_tools')}</h1>
                 <div class="Gallery-images">
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://xebialabs.com/wp-content/uploads/files/tool-chest/specflow.jpg)"}}></div>
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/108859509/original/ddb7edfac989723e263404fedb528ab499674323/help-you-set-up-jira-and-confluence.png)"}}></div>
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://i2.wp.com/www.ylneo.com/wp-content/uploads/2019/11/teams-1.png?resize=1080%2C528&ssl=1)"}}></div>
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://www.emerce.nl/content/uploads/2018/08/Pega-430x400.jpg)"}}></div>
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://www.kindpng.com/picc/m/13-131087_visual-studio-2019-official-logo-visual-studio-2010.png)"}}></div>
                     <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
                 </div>
                 <Button colored onClick={() => this.closeAll()} style={{marginLeft: "80%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('project_gallery_close')}</Button>
@@ -403,22 +411,30 @@ closeAll () {
                 	<p class="projects_text">{t('project8_desc')}</p>
                 <div class="Gallery-images">
                     <div class="Gallery-left">
-                        <div class="Gallery-image" style={{backgroundImage: "url()", width: "15rem", height: "9.5rem"}}></div>
-                        <div class="Gallery-image" style={{backgroundImage: "url()", width: "15rem", height: "9.5rem"}}></div>
+                        <div class="Gallery-image" style={{backgroundImage: "url(https://www.qoodos.fr/wp-content/uploads/2016/04/ios-vs-android.jpg)", width: "15rem", height: "9.5rem"}}></div>
+                        <div class="Gallery-image" style={{backgroundImage: "url(https://techcrunch.com/wp-content/uploads/2017/06/snap-acquires-zenly.png)", width: "15rem", height: "9.5rem"}}></div>
                     </div>
-                    <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/k0i2kJAY76gXZg9EQQY9b_TQIaNMeVSCbmLo9Q43WcAlZPjXTHiMbg3OGIYX3UunD9WrmC1cmEzS-TGAKSeYXF-JI_afIVLmu4Mj4OppMw5l8Vj0TDGoeiCWZ01rbnEv_WdUE_fJst7sfMHhLOU)"}}></div>
+                    <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/DnJQHlRI90EonvSDMctSJaN51YhxBL29_yopFIdj2F3MORIsSWm2mJOquFyIlITC0RRzvzgQuR05o0_CA5o96w6vNh0ky2h7_FDIELM_oBkdKA1SAHIf847QiOwFG8k)"}}></div>
                 </div>
                     	<h1 class="projects_header">{t('project_activities')}</h1>
                     	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project8_results')}</p>
                     	<h1 class="projects_header">{t('project_tools')}</h1>
-                <div class="Gallery-images">
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                    <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
-                </div>
+                  <div class="Gallery-images">
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://3.bp.blogspot.com/-U9fehH7pXsA/V6Bm0PeB63I/AAAAAAAAAB8/wfs4dkrBPSMGXvcqbojjPTakTuuhJ7JvACEw/s1600/AWS-Device-Farm.jpg)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://img.over-blog-kiwi.com/1/19/40/37/20170505/ob_00db63_pyhon-programmation-informatique.png)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://project-management.com/wp-content/uploads/2020/01/notion-logo.png)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://campzone.nl/wp-content/uploads/2017/03/discord-logo.jpg)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://www.programsbuzz.com/sites/default/files/inline-images/MobileDevTest_Blog-700x300%20%281%29.jpg)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/108859509/original/ddb7edfac989723e263404fedb528ab499674323/help-you-set-up-jira-and-confluence.png)"}}></div>
+                  </div>
+                  <div class="Gallery-images">
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://xebialabs.com/wp-content/uploads/xray.jpg)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://xebialabs.com/wp-content/uploads/2018/10/buildkite.png)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://miro.medium.com/max/960/0*gCoeYBAsHmiGrgKe.jpg)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Android_Studio_icon.svg/1200px-Android_Studio_icon.svg.png)"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+                      <div class="Gallery-image" style={{backgroundImage: "url()"}}></div>
+                  </div>
                 <Button colored onClick={() => this.closeAll()} style={{marginLeft: "80%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('project_gallery_close')}</Button>
             </section>
 

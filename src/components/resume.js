@@ -254,7 +254,7 @@ openProjectsFromResume (project) {
     iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
     icon={<img src="https://www.nettl.com/nl/wp-content/uploads/2019/06/fedex-logo.jpg" style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
   >
-    <h3 className="vertical-timeline-element-title">QA Engineer / Scrum Masteer</h3>
+    <h3 className="vertical-timeline-element-title">QA Engineer / Scrum Master</h3>
     <h4 className="vertical-timeline-element-subtitle">FedEx</h4>
      <a href="/projects" onClick={(event) => this.openProjectsFromResume('FedEx')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
   </VerticalTimelineElement>

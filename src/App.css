@@ -1,10 +1,159 @@
-.header-color {
-	opacity: .8;
+@media only screen and (max-width: 767px) {
+    .moon{
+     	height: 30%;
+        width: 40%;
+    }
+
+    .koolit-avatar {
+        width: 40%;
+        margin-top: 20%;
+    }
+
+    .koolit-banner {
+        margin-top: 8% !important;
+    }
+
+    .koolit-banner h1 {
+    	font-size: 36px;
+    }
+
+    .koolit-banner hr {
+    	border-top: 3px dotted white;
+    }
+
+    .koolit-banner p {
+     	font-size: 60%;
+    }
+
+    .social-links {
+    	width: 75%;
+    }
+
+    .social-links i{
+    	font-size: 25px;
+    }
+
+    .ppc-icon-text{
+        font-size: 12px !important;
+    }
 }
 
-.aboutmeClass{
-    background: #40E0D0;  /* fallback for old browsers */
-    background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .moon{
+     	height: 40%;
+        width: 40%;
+    }
+
+    .koolit-avatar {
+        width: 30%;
+        margin-top: 15%;
+    }
+
+    .koolit-banner h1 {
+    	font-size: 48px;
+    }
+
+    .koolit-banner hr {
+    	border-top: 4px dotted white;
+    }
+
+    .koolit-banner p {
+     	font-size: 16px;
+    }
+
+    .social-links {
+    	width: 50%;
+    }
+
+    .social-links i{
+    	font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .moon{
+     	height: 50%;
+    	width: 30%;
+    }
+
+    .koolit-avatar {
+        width: 300px;
+        margin-top: 10%;
+    }
+
+    .koolit-banner h1 {
+    	font-size: 65px;
+    }
+
+    .koolit-banner hr {
+    	border-top: 5px dotted white;
+    }
+
+    .koolit-banner p {
+     	font-size: 20px;
+    }
+
+    .social-links {
+    	width: 40%;
+    }
+
+    .social-links i{
+    	font-size: 35px;
+    }
+
+}
+
+
+.moon{
+	position: absolute;
+	right: -10%;
+	z-index: 3;
+	top: -10%;
+}
+
+.koolit-avatar {
+    height: auto;
+    overflow: hidden;
+    border-radius: 200px;
+    object-fit: cover;
+    box-shadow: 0px 2.5px 7.5px 7.5px rgba(150,150,150);
+    opacity: 0.9;
+}
+
+.koolit-banner {
+	background-color: black;
+    width: 80%;
+	opacity: .7;
+    border-radius: 15px;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0px 0px 3px 3px rgba(150,150,150);
+}
+
+.koolit-banner h1 {
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.koolit-banner hr {
+	width: 50%;
+	margin: auto;
+}
+
+.koolit-banner p {
+ 	color: white;
+ 	padding-top: 2%;
+ 	text-align: center;
+}
+
+.header-color {
+	opacity: .8;
 }
 
 .header-color img {
@@ -18,10 +167,11 @@
 	margin: 200px;
 }
 
-/*below mdl-layout breaks test-page*/
+/*below mdl-layout breaks test-page
 .mdl-layout {
 	height: fit-content !important;
 }
+*/
 
 .mdl-layout__header-row .mdl-navigation__link {
 	font-weight: bold;
@@ -32,6 +182,7 @@
 	font-weight: bold;
 	font-size: 125%;
 }
+
 
 translate_option{
 	background-color: transparent;
@@ -64,60 +215,15 @@ translate_option{
 	opacity: 0.6;
 }
 
-.koolit-avatar {
-    width: 300px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 200px;
-    object-fit: cover;
-    margin-top: 10%;
-    box-shadow: 0px 2.5px 7.5px 7.5px rgba(150,150,150);
-    opacity: 0.9;
-}
-
-.koolit-banner {
-	background-color: black;
-    width: 80%;
-	opacity: .7;
-    border-radius: 15px;
-    margin-top: 3%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    z-index: 3;
-    box-shadow: 0px 0px 1px 1px rgba(150,150,150);
-}
-
-.koolit-banner h1 {
-	font-size: 65px;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-}
-
-.koolit-banner hr {
-	border-top: 5px dotted white;
-	width: 50%;
-	margin: auto;
-}
-
-.koolit-banner p {
- 	font-size: 20px;
- 	color: white;
- 	padding-top: 2%;
- 	text-align: center;
-}
 
 .social-links {
 	display: flex;
 	justify-content: space-between;
-	width: 50%;
 	margin: auto
 }
 
 .social-links i{
 	color: white;
-	font-size: 35px;
 	padding: 8px;
 	font-weight: bold;
 }
@@ -127,14 +233,7 @@ translate_option{
   z-index: 3;
 }
 
-.moon{
-	position: absolute;
- 	height: 55%;
-	width: 30%;
-	right: -10%;
-	z-index: 3;
-	top: -10%;
-}
+
 
 @keyframes move-background {
   from {
