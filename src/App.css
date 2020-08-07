@@ -1,4 +1,7 @@
 @media only screen and (max-width: 767px) {
+
+/*Homepage*/
+
     .moon{
      	height: 30%;
         width: 40%;
@@ -36,10 +39,51 @@
     .ppc-icon-text{
         font-size: 12px !important;
     }
+
+/*AboutMe*/
+
+    #aboutPage {
+        margin-top: 15%;
+        display: block !important;
+        margin-left: 5%;
+    }
+
+    div.item{
+        margin: 5% !important;
+    }
+
+    div.item.aboutme i p {
+      font-size: 14px !important;
+      width: 600% !important;
+      margin-left: -250% !important;
+
+    }
+
+    div.item i {
+      font-size: 20px !important;
+      width: 40px !important;
+      height: 40px !important;
+      line-height: 40px !important;
+    }
+
+/*Projects*/
+
+
+/*Resume*/
+
+
+/*PPC*/
+
+
+/*Test*/
+
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+/*Homepage*/
+
     .moon{
      	height: 40%;
         width: 40%;
@@ -69,9 +113,36 @@
     .social-links i{
     	font-size: 35px;
     }
+
+/*AboutMe*/
+
+    #aboutPage {
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    div.item {
+        flex-basis: 45% !important;
+    }
+
+
+/*Projects*/
+
+
+/*Resume*/
+
+
+/*PPC*/
+
+
+/*Test*/
+
 }
 
+
 @media only screen and (min-width: 1024px) {
+
+/*Homepage*/
 
     .moon{
      	height: 50%;
@@ -102,6 +173,20 @@
     .social-links i{
     	font-size: 35px;
     }
+
+/*AboutMe*/
+
+
+/*Projects*/
+
+
+/*Resume*/
+
+
+/*PPC*/
+
+
+/*Test*/
 
 }
 
@@ -325,6 +410,92 @@ translate_option{
   -webkit-animation:move-background 150s linear infinite;
   animation:move-background 50s linear infinite;
 }
+
+
+/* about page */
+
+.h1 {
+  font-family: Raleway;
+  text-align: center;
+}
+
+#aboutPage {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 5%;
+}
+
+div.item {
+  flex-basis: 25%;
+  position: relative;
+  float: left;
+  margin: 2.5%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+div.item * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+div.item img {
+  vertical-align: top;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 10px rgba(150,150,150,.7);
+    width: 100%;
+    height: 100%
+}
+
+div.item i {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+}
+
+div.item.aboutme {
+  background-color: #797d78;
+}
+
+div.item.aboutme i {
+  color: #34495e;
+}
+
+div.item.aboutme i p {
+  color: white;
+  width: 400%;
+  margin-left: -150%;
+  margin-top: 20%;
+  font-size: 45%;
+  font-weight: bold;
+}
+
+div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(1.2);
+}
+
+div.item i {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+div.item:hover i {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+div.item *{
+  transition: all ease-in-out 0.5s;
+}
+
 
 /* projectsPage css */
 
@@ -794,11 +965,6 @@ translate_option{
 
 
 
-
-
-
-
-
 /* Resume Page css */
 .resume_column_left, .resume-right-col {
   box-shadow: 0px 0px 5px 5px rgba(150,150,150,.7);
@@ -868,7 +1034,10 @@ translate_option{
     background-image: linear-gradient(to right, rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), linear-gradient(to right, rgba(5,5,5, 0.7), rgba(5,5,5, 0.7)) !important;
 }
 
+
+
 /* contact page css */
+
 .contact-body {
   margin: auto;
   position: fixed;
@@ -918,96 +1087,8 @@ translate_option{
 }
 
 
-
-/* about page */
-.h1 {
-  font-family: Raleway;
-  text-align: center;
-}
-
-#aboutPage {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: 5%;
-}
-
-div.item {
-  flex-basis: 25%;
-  position: relative;
-  float: left;
-  margin: 2.5%;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
-}
-
-div.item * {
-  box-sizing: border-box;
-  width: 100%;
-}
-
-div.item img {
-  vertical-align: top;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px 10px rgba(150,150,150,.7);
-    width: 100%;
-    height: 100%
-}
-
-div.item i {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  border-radius: 50%;
-  font-size: 34px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background: #ffffff;
-}
-
-div.item.aboutme {
-  background-color: #797d78;
-}
-div.item.aboutme i {
-  color: #34495e;
-}
-
-div.item.aboutme i p {
-  color: white;
-  width: 400%;
-  margin-left: -150%;
-  margin-top: 20%;
-  font-size: 45%;
-  font-weight: bold;
-}
-
-div.item:hover img {
-  opacity: 0.3;
-  filter: grayscale(1.2);
-}
-
-div.item i {
-  transform: translate(-50%, -50%) scale(0);
-}
-
-div.item:hover i {
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-div.item *{
-  transition: all ease-in-out 0.5s;
-}
-
-
-
-
-
-
 /* test page */
+
 .test-page {
 	background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background-size: 400% 400%;
