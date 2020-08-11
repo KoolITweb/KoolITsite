@@ -2,6 +2,231 @@ import React, { Component } from 'react';
 import { withNamespaces } from 'react-i18next';
 import { Button } from 'react-mdl';
 import ReactGA from 'react-ga';
+import importAll from '../importAll';
+
+
+const project_pictures = importAll(require.context('../images/organizations/projects', false, /\.(png|jpe?g)$/));
+const tools = importAll(require.context('../images/tools', false, /\.(png|jpe?g)$/));
+
+
+const completeProject = [
+      {
+        "ProjectName": "Zenly",
+        "ProjectCard": "card-Zenly",
+        "ProjectGalId": "gallery-Zenly",
+        "ProjectsCardImage": project_pictures['projects-zenly.jpg'],
+        "ProjectGalMainImage": project_pictures['proj-zenly-mainapp'],
+        "ProjectGalSubImage1": project_pictures['proj-zenly-iosandr'],
+        "ProjectGalSubImage1": project_pictures['proj-zenly-snapzen'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "Transavia",
+        "ProjectCard": "card-Transavia",
+        "ProjectGalId": "gallery-Transavia",
+        "ProjectsCardImage": project_pictures['projects-transavia.png'],
+        "ProjectGalMainImage": project_pictures['proj-trans-mainplane'],
+        "ProjectGalSubImage1": project_pictures['proj-trans-covid'],
+        "ProjectGalSubImage1": project_pictures['proj-trans-support'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "Rabobank",
+        "ProjectCard": "card-Rabobank",
+        "ProjectGalId": "gallery-Rabobank",
+        "ProjectsCardImage": project_pictures['projects_rabo.jpg'],
+        "ProjectGalMainImage": project_pictures['proj-rabo-wonen.svg'],
+        "ProjectGalSubImage1": project_pictures['proj-rabo-bdd.png'],
+        "ProjectGalSubImage1": project_pictures['proj-rabo-im.png'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "AH",
+        "ProjectCard": "card-AH",
+        "ProjectGalId": "gallery-AH",
+        "ProjectsCardImage": project_pictures['projects-ah.png'],
+        "ProjectGalMainImage": project_pictures['proj-ah-mainfloorplan.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-ah-database.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-ah-sql.png'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "FedEx",
+        "ProjectCard": "card-FedEx",
+        "ProjectGalId": "gallery-FedEx",
+        "ProjectsCardImage": project_pictures['projects-fedex-logo.png'],
+        "ProjectGalMainImage": project_pictures['proj-fedex-maintotnt.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-fedex-mvp.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-fedex-scrum.png'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "TNT",
+        "ProjectCard": "card-TNT",
+        "ProjectGalId": "gallery-TNT",
+        "ProjectsCardImage": project_pictures['projects_tnt.jpg'],
+        "ProjectGalMainImage": project_pictures['proj-tnt-main-track.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-tnt-data-driven.png'],
+        "ProjectGalSubImage1": project_pictures['proj-ci-cd.png'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "Randstad",
+        "ProjectCard": "card-Randstad",
+        "ProjectGalId": "gallery-Randstad",
+        "ProjectsCardImage": project_pictures['projects_randstad.jpg'],
+        "ProjectGalMainImage": project_pictures['proj-randstad-mainwerkplanning.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-randstad-customerfirst.png'],
+        "ProjectGalSubImage1": project_pictures['proj-randstad-bdd.png'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
+      {
+        "ProjectName": "DJI",
+        "ProjectCard": "card-DJI",
+        "ProjectGalId": "gallery-DJI",
+        "ProjectsCardImage": project_pictures['projects_minJus.jpg'],
+        "ProjectGalMainImage": project_pictures['proj-minjus-maingev.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-minjus-complex.png'],
+        "ProjectGalSubImage1": project_pictures['proj-minjus-together.png'],
+        "Tools": [
+            tools['tool-amplitude.png'],
+            tools['tool-buildkite.png'],
+            tools['tool-pytest.png'],
+            tools['tool-appium.jpg'],
+            tools['tool-awsdevicefarm.jpg'],
+            tools['tool-discord.jpg'],
+            tools['tool-docker.jpg'],
+            tools['tool-firebase.png'],
+            tools['tool-jira.jpg'],
+            tools['tool-xray.jpg'],
+            tools['tool-notion.png'],
+            tools['tool-Pycharm.png'],
+            tools['tool-python.png'],
+            tools['tool-testrail.jpg'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      }
+    ]
 
 
 class Projects extends Component {
@@ -36,9 +261,83 @@ closeAll () {
   })
 }
 
+
   render() {
 
   	  const { t } = this.props;
+
+
+  	  const projectItem = completeProject.map(function(project){
+
+       return <a class="Card" id={project.ProjectCard} onClick={(event) => this.openGallery(project.ProjectCard)}>
+                  <div class="Card-thumb">
+                      <div class="Card-shadow"></div>
+                      <div class="Card-shadow"></div>
+                      <div class="Card-shadow"></div>
+                      <div class="Card-image" style={{backgroundImage: "url(" + project.ProjectsCardImage + ")"}}></div>
+                  </div>
+                  <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
+                  <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
+                  <button class="Card-button">{t('project_click_here')}</button>
+              </a>
+      })
+
+  	  const galleryItem = completeProject.map(function(project){
+  	    return <section class="Gallery" id="gallery-Rabobank" onClick={() => this.closeAll()}>
+            <div class="Gallery-header">
+              <a class="Gallery-close" onClick={() => this.closeAll()}>×</a>
+            </div>
+         	<h1 class="projects_top_header">Project details</h1>
+            	<p class="projects_text">{t('project1_desc')}</p>
+            <div class="Gallery-images">
+                <div class="Gallery-left">
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://www.impactmapping.org/assets/im_template.png)", width: "15rem", height: "9.5rem"}}></div>
+                    <div class="Gallery-image" style={{backgroundImage: "url(https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2017/05/02111751/behavior-driven-development.png?fit=540%2C270&ssl=1)", width: "15rem", height: "9.5rem"}}></div>
+                </div>
+                <div class="Gallery-image Gallery-image--primary" style={{backgroundImage: "url(https://www.rabobank.nl/images/huis%20waarde%20rgb%20tr2_291051499.svg)"}}></div>
+            </div>
+                	<h1 class="projects_header">{t('project_activities')}</h1>
+                	<p class="projects_text" style={{whiteSpace: "pre-line"}}>{t('project1_results')}</p>
+                	<h1 class="projects_header">{t('project_tools')}</h1>
+            <div class="Gallery-images">
+                <div class="Gallery-image" style={{backgroundImage: "url(https://www.steadylearner.com/static/images/code/cypress.png)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://d-media.nl/sites/default/files/styles/header_visual_small/public/blog/googleanalytics-2.png.jpg?itok=G2WQej1g)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://xebialabs.com/wp-content/uploads/files/tool-chest/protractor.jpg)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://i2.wp.com/grantnorwood.com/app/uploads/2017/07/webdriver-io-logo.png?fit=1200%2C632&ssl=1)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://hackernoon.com/hn-images/1*_OZPYJAdq4IuOXmG5dGC2A.png)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://3.bp.blogspot.com/-fw4AXGadQSk/WA3zt1SqwzI/AAAAAAAAPBg/5xfO8DWkAIg9KA47rBUbhMJryC4vmU0gQCLcB/s1600/Screen%2BShot%2B2016-10-24%2Bat%2B5.12.06%2BPM.png)"}}></div>
+            </div>
+            <div class="Gallery-images">
+                <div class="Gallery-image" style={{backgroundImage: "url(https://cdn-images.threadless.com/threadless-media/artist_shops/shops/cucumberbdd/products/331109/shirt-1506698959-892d215946bfe35c7925c81fe8298354.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiZmZmZmZmIn1dLCBbInJlc2l6ZSIsIFs4MDBdLCB7fV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzgwMCwgODAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV19)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://admin.happyidiots.nl/wp-content/uploads/2016/10/Google-Data-Studio.jpg)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://www.programsbuzz.com/sites/default/files/inline-images/MobileDevTest_Blog-700x300%20%281%29.jpg)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://s3-us-west-2.amazonaws.com/assertible/integrations/postman-logo-horizontal.png)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://xebialabs.com/wp-content/uploads/files/tool-chest/gatling.jpg)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/108859509/original/ddb7edfac989723e263404fedb528ab499674323/help-you-set-up-jira-and-confluence.png)"}}></div>
+            </div>
+            <div class="Gallery-images">
+                <div class="Gallery-image" style={{backgroundImage: "url(https://lucasvidelaine.files.wordpress.com/2018/01/jenkins1.png?w=822)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://www.bujarra.com/wp-content/uploads/2018/11/kibana0-978x500.jpg"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://cdn.dribbble.com/users/18069/screenshots/762796/bitbucket_logo.png)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://www.freelancinggig.com/blog/wp-content/uploads/2018/10/Apache-Maven-its-uses.jpeg)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://www.laramind.com/blog/wp-content/uploads/2018/06/Untitled-design-8-620x420.png)"}}></div>
+                <div class="Gallery-image" style={{backgroundImage: "url(https://www.1ere-position.fr/wp-content/uploads/2018/05/google-lighthouse-plugin-seo.png)"}}></div>
+            </div>
+            <Button colored onClick={() => this.closeAll()} style={{marginLeft: "80%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('project_gallery_close')}</Button>
+        </section>
+
+        //if (tools <= 6) {
+        //  return <Hour />;
+        //} else if (tools > 6 && tools <= 12) {
+        //  return <Minute />;
+        //} else if (tools >12 && tools <=18) {
+        //  return <Second />;
+        //} else if (tools >18 && tools <=24) {
+        //  return <Ampm />;
+        //} else {
+        //  return <h1>Expand Tools Section</h1>;
+        //}
+        })
 
       return(
             <div className="projects-grid">
@@ -47,108 +346,11 @@ closeAll () {
 
                 <div class="Grid-row">
 
-                    <a class="Card" onClick={(event) => this.openGallery('Zenly')} id="card-Zenly">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://fr.jobs.game/images/clients/logo/P/3895.jpg)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button>
-                    </a>
-
-                    <a class="Card" onClick={() => this.openGallery('Transavia')} id="card-Transavia">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://www.vanadengage.com/wp-content/uploads/2018/11/Transavia-vierkant_klein-900x.png)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button>
-                    </a>
-
-                    <a class="Card" onClick={() => this.openGallery('Rabobank')} id="card-Rabobank">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://radar.avrotros.nl/fileadmin/user_upload/rabobank-reactie-23-09-2019.jpg)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button>
-                    </a>
+                    {projectItem}
 
                  </div>
-                 <div class="Grid-row">
 
-                    <a class="Card" onClick={() => this.openGallery('AH')} id="card-AH">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://sollicitatieblog.nl/wp-content/uploads/2019/04/ahold-delhaize-logo.png)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button>
-                    </a>
-
-                    <a class="Card" onClick={() => this.openGallery('FedEx')} id="card-FedEx">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://www.reybex.com/wp-content/uploads/2019/07/fedex_reybex_schnittstelle.gif)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div>
-                        <button class="Card-button">{t('project_click_here')}</button>
-                    </a>
-
-                   <a class="Card" onClick={() => this.openGallery('TNT')} id="card-TNT">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://sc02.alicdn.com/kf/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ/936445268/UTB8Ae8LzCnEXKJk43Ubq6zLppXaQ.jpg)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button>
-                   </a>
-
-                  </div>
-                  <div class="Grid-row">
-
-                   <a class="Card" onClick={() => this.openGallery('Randstad')} id="card-Randstad">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://rw-poarivierenland.nl/wp-content/uploads/2018/03/randstad-uitzendbureau.jpg)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span>{t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button>
-                   </a>
-
-                   <a class="Card" onClick={() => this.openGallery('DJI')} id="card-DJI">
-                        <div class="Card-thumb">
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-shadow"></div>
-                            <div class="Card-image" style={{backgroundImage: "url(https://www.strafrechtketen.nl/binaries/medium/content/gallery/strafrechtketen/content-afbeeldingen/2019/justitie-en-veiligheid-bulletin.jpg)"}}></div>
-                        </div>
-                        <div class="Card-title"><span>{t('project_logo_hover')}</span></div>
-                        <div class="Card-explore"><span> {t('project_details_activities')}</span></div><button class="Card-button">{t('project_click_here')}</button>
-                   </a>
-
-                </div>
             </section>
-
 
             <section class="Gallery" id="gallery-Rabobank" onClick={() => this.closeAll()}>
                 <div class="Gallery-header">

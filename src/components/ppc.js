@@ -2,14 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { withNamespaces } from 'react-i18next';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import '../slider.css';
+import importAll from '../importAll';
+
 
 const images = importAll(require.context('../images/ppc', false, /\.(png|jpe?g)$/));
 
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-  return images;
-}
 
 const imageDescription = [
     "sheet1_explanation",

@@ -9,14 +9,10 @@ import 'react-vertical-timeline-component/style.min.css';
 import profilePic from '../images/profile/Daan.jpg';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga'
+import importAll from '../importAll';
+
 
 const company_logos = importAll(require.context('../images/organizations', false, /\.(png|jpe?g)$/));
-
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-  return images;
-}
 
 
 class Resume extends Component {
