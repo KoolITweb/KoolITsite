@@ -1,6 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { withNamespaces } from 'react-i18next';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import '../slider.css';
 import importAll from '../importAll';
 
@@ -67,7 +66,7 @@ class Ppc extends Component {
     //this.myImage = React.createRef();
   }
   slideTransition = (slider) => {
-    if(this.state.currentIndex==10) {
+    if(this.state.currentIndex === 10) {
       this.left=0;
       slider.style.left = this.left+'px';
     }

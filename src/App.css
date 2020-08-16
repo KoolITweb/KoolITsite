@@ -85,6 +85,13 @@
       margin: 5%;
     }
 
+    .Gallery-header {
+      top: 0%;
+    }
+
+    .projects_top_header, .projects_header, .Gallery-images, .projects_text {
+    	width: 90%;
+    }
 
 /*Resume*/
 
@@ -148,6 +155,13 @@
 
 /*Projects*/
 
+    .Gallery-header {
+      top: 0%;
+    }
+
+    .projects_top_header, .projects_header, .Gallery-images, .projects_text {
+    	width: 90%;
+    }
 
 /*Resume*/
 
@@ -199,6 +213,13 @@
 
 /*Projects*/
 
+     .Gallery-header {
+       top: 6.6%;
+     }
+
+    .projects_top_header, .projects_header, .Gallery-images, .projects_text {
+    	width: 47rem;
+    }
 
 /*Resume*/
 
@@ -874,7 +895,6 @@ div.item *{
 	font-weight: bold;
 	font-size: 250%;
 	text-align: left;
-	width: 47rem;
 	margin: 1% auto;
 }
 
@@ -885,7 +905,6 @@ div.item *{
 .projects_text {
 	font-size: 110%;
 	text-align: left;
-	width: 47rem;
 	margin: 1% auto;
 	margin-bottom: 2%;
 }
@@ -908,8 +927,7 @@ div.item *{
   position: fixed;
   left: 0;
   right: 0;
-  top: 6.6%;
-  background-color: #eee;
+  background-color: black;
   padding-bottom: 4rem;
 }
 .Gallery-close {
@@ -925,7 +943,6 @@ div.item *{
 }
 .Gallery-images {
   display: flex;
-  width: 47rem;
   margin: 1% auto;
   justify-content: space-between;
   margin-bottom: 2%;

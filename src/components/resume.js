@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Button, Grid, Cell } from 'react-mdl';
 import Education from './education';
-import Experience from './experience';
 import Skills from './skills';
 import { withNamespaces } from 'react-i18next';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import profilePic from '../images/profile/Daan.jpg';
-import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga'
 import importAll from '../importAll';
 
