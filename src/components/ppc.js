@@ -184,12 +184,14 @@ render() {
   console.log(i);
   var dotNumbers = Array.from(Array(ImageURL.length).keys());
   const carouselDots = dotNumbers.map((n,index)=><div className={['carousel-dot', index === this.state.currentIndex ? 'active' : ''].join(' ')} key={n} id={n} onClick={this.dotHandler} >&#9679;</div>)
+
+  // add <p>{t('ppc_'+imageDescription[i])} <p> for a description of every step after span
   const ImgItem =
   <div className="gallery-img-container">
     <img className="gallery-img" src={ImageURL[i]}/>
     <h2>
     <span>{t('ppc_'+imageText[i])}</span>
-    <p>{t('ppc_'+imageDescription[i])}</p></h2>
+    </h2>
     <div className= "prev-carousel-button" onClick={this.prevHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9664;</div>
     <div id="carousel-dot-container">{carouselDots}</div>
     <div className= "next-carousel-button" onClick={this.nextHandler} style={{fontSize: "40px", fontFamily: "Helvetica, Arial, sans-serif"}}>&#9654;</div>
@@ -199,13 +201,13 @@ render() {
      </div>
 
      var imgId=0;
-     const sliderImages = ImageURL.slice(0,10).map ((n,index)=><img className={['slider-img', index === this.state.currentIndex ? 'active' : ''].join(' ')} src={n} key={n} id={imgId++} onClick={this.updateImage}/>)
+     const sliderImages = ImageURL.slice(0,11).map ((n,index)=><img className={['slider-img', index === this.state.currentIndex ? 'active' : ''].join(' ')} src={n} key={n} id={imgId++} onClick={this.updateImage}/>)
 
      return (
          <div className="ppcPage">
             <div className="ppcHeader">
-            <h1 style={{fontWeight: "bold"}}>Product Practices Canvas</h1>
-            <p style={{fontWeight: "bold", fontSize: "16.10px"}}>{t('ppc_intro')}</p>
+            <h1 className="ppc-page-header" style={{fontWeight: "bold"}}>Product Practices Canvas</h1>
+            <p style={{fontWeight: "bold", fontSize: "16.10px"}}>{t('ppc_intro')} <a href="https://productpracticescanvas.org/" style={{ color: "white", fontWeight: "bold" }}>www.productpracticescanvas.org</a> </p>
                 </div>
                 <div id="gallery-container" ref={this.myImage}>
                     {ImgItem}

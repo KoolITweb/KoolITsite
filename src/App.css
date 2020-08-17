@@ -101,7 +101,54 @@
 
 /*PPC*/
 
+    .gallery-img-container h2 p{
+        font-size: 15px !important;
+    }
 
+    .gallery-img-container h2{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 5%;
+    }
+
+    .gallery-img-container h2 span, p{
+        margin-left: auto !important;
+        margin-top: 10px !important;
+    }
+
+    .slideshow-button, .fullscreen-button {
+        margin-top: 2% !important;
+        margin-bottom: 2% !important;
+        position: relative !important;
+        font-weight: bold;
+    }
+
+    #carousel-dot-container {
+        margin-top: 2%;
+    }
+
+    .fullscreen-button {
+        visibility: hidden;
+    }
+
+    .slideshow-button {
+        left: 30% !important;
+    }
+
+    .gallery-img {
+        height: 300px !important;
+    }
+
+    .ppc-page-header {
+        font-size: 36px;
+        margin-top: 50px;
+        line-height: 1;
+    }
+
+    .slider-img {
+        width: 7.5% !important;
+        height: 28px !important;
+    }
 /*Test*/
 
 }
