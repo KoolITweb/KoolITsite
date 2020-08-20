@@ -50,7 +50,7 @@ import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
                             <Link to="/resume">{t('menu_resume')}</Link>
                             <Link to="/projects">{t('menu_projects')}</Link>
                             <Link to="/ppc">PPC</Link>
-                            <Link to="/test-page">{t('menu_test')}</Link>
+                            <Link to="/test">{t('menu_test')}</Link>
                             <Link to="/contact">{t('menu_contact')}</Link>
                         </Navigation>
                     </Drawer>
