@@ -1,6 +1,6 @@
-import  React from 'react';
+import React from 'react';
 import './App.css';
-import {Header, Navigation, Drawer, Layout, Content} from 'react-mdl';
+import {Header, Navigation, Drawer, Layout, Content, Menu, MenuItem} from 'react-mdl';
 import Main from './components/main'
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
@@ -58,10 +58,14 @@ import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
                         <div className="page-content" style={{marginTop: "2%"}}/>
                         <Main/>
                     </Content>
+                    <div id="mobileLanguage" className="fa fa-globe" style={{ background: "rgba(0,0,0,.5)", borderRadius: "15px", position: 'absolute', padding: "0", color: "white", opacity: ".8", right: "10px", top: "15px", fontSize: "175%", zIndex: "9999"}}>
+                        <select defaultValue="en" onChange={(e) => changeLanguage(e.target.value)} style={{ background: "none", marginLeft: "2px", marginRight: "4px",fontSize: "16px", border: "none", color: "white", opacity: ".8", fontWeight: "bold"}}>
+                             <option value="en">EN</option>
+                             <option value="nl">NL</option>
+                         </select>
+                    </div>
                 </Layout>
-
             </div>
-
       );
 }
 

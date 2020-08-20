@@ -149,8 +149,29 @@
         width: 7.5% !important;
         height: 28px !important;
     }
-/*Test*/
 
+/*Contact*/
+
+    .contact-grid {
+        font-size: 50%;
+        margin-top: 25% !important;
+    }
+
+    .mdl-list__item {
+        font-size: 50%;
+    }
+
+    .contact-list i {
+      font-size: 24px !important;
+      padding-right: 1rem !important;
+    }
+
+    .spaceCabbage{
+     	height: 27% !important;
+    	width: 50% !important;
+    	right: -2% !important;
+    	transform: rotate(330deg);
+    }
 }
 
 
@@ -255,6 +276,10 @@
     	font-size: 35px;
     }
 
+    #mobileLanguage {
+        visibility: hidden;
+    }
+
 /*AboutMe*/
 
 
@@ -274,7 +299,11 @@
 /*PPC*/
 
 
-/*Test*/
+/*Contact*/
+
+    .mdl-list__item {
+        font-size: 30px !important;
+    }
 
 }
 
@@ -364,6 +393,7 @@ translate_option{
 
 .material-icons{
 	color: white;
+	font-size: 30px !important;
 }
 /* homePage css*/
 
@@ -1162,6 +1192,12 @@ div.item *{
 .contact-list i {
   font-size: 66px;
   padding-right: 5rem;
+}
+
+.mdl-list__item {
+    font-family: 'Anton', sans-serif !important;
+    color: white !important;
+    font-weight: bold !important;
 }
 
 .spaceCabbage{
