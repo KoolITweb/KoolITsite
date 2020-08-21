@@ -93,6 +93,11 @@
     	width: 90%;
     }
 
+    .Gallery-close {
+        top: 5rem !important;
+        opacity: 1 !important;
+    }
+
 /*Resume*/
 
     .resume_column_left {
@@ -158,7 +163,7 @@
     }
 
     .mdl-list__item {
-        font-size: 50%;
+        font-size: 90%;
     }
 
     .contact-list i {
