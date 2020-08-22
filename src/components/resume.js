@@ -12,6 +12,99 @@ import importAll from '../importAll';
 
 const company_logos = importAll(require.context('../images/organizations', false, /\.(png|jpe?g)$/));
 
+const resume_companies = [
+      {
+        "CompanyName": "Zenly",
+        "JobTitle": "QA Automation Engineer",
+        "ResumeId": "Resume-zenly",
+        "Period": "04-2020 - ",
+        "CompanyLogo": company_logos['cv-zenly-logo.png']
+      },
+      {
+        "CompanyName": "Transavia",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-transavia",
+        "Period": "03/2020 - 04/2020",
+        "CompanyLogo": company_logos['cv-transavia-logo.png']
+      },
+      {
+        "CompanyName": "Rabobank",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-rabo",
+        "Period": "02/2018 - 01/2020",
+        "CompanyLogo": company_logos['cv-rabo-logo.jpg']
+      },
+      {
+        "CompanyName": "Ahold Delhaize",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-ah",
+        "Period": "04/2017 - 02/2018",
+        "CompanyLogo": company_logos['cv-ah-logo.jpg']
+      },
+      {
+        "CompanyName": "FedEx",
+        "JobTitle": "QA Engineer/Scrum Master",
+        "ResumeId": "Resume-fedex",
+        "Period": "07/2016 - 04/2017",
+        "CompanyLogo": company_logos['cv-fedex-logo.jpg']
+      },
+      {
+        "CompanyName": "TNT",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-tnt",
+        "Period": "06/2015 - 06/2016",
+        "CompanyLogo": company_logos['cv-tnt-logo.png']
+      },
+      {
+        "CompanyName": "KoolIT",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-koolit",
+        "Period": "06/2015 - ",
+        "CompanyLogo": company_logos['cv-koolit-logo.jpeg']
+      },
+      {
+        "CompanyName": "Randstad",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-randstad",
+        "Period": "10/2013 - 05/2015",
+        "CompanyLogo": company_logos['cv-randstad-logo.png']
+      },
+      {
+        "CompanyName": "Ministerie van Veiligheid en Justitie",
+        "JobTitle": "Test Coöridinator",
+        "ResumeId": "Resume-dji",
+        "Period": "04/2012 - 10/2013",
+        "CompanyLogo": company_logos['cv-minjus-logo.jpg']
+      },
+      {
+        "CompanyName": "Cerios",
+        "JobTitle": "Test Consultant",
+        "ResumeId": "Resume-cerios",
+        "Period": "11/2011 - 05/2015",
+        "CompanyLogo": company_logos['cv-cerios-logo.png']
+      },
+      {
+        "CompanyName": "ING",
+        "JobTitle": "Software Tester",
+        "ResumeId": "Resume-ing",
+        "Period": "08/2010 - 01/2012",
+        "CompanyLogo": company_logos['cv-ing-logo.png']
+      },
+      {
+        "CompanyName": "ADP",
+        "JobTitle": "Software Tester",
+        "ResumeId": "Resume-adp",
+        "Period": "05/2010 - 07/2010",
+        "CompanyLogo": company_logos['cv-adp-logo.jpg']
+      },
+      {
+        "CompanyName": "Qquest",
+        "JobTitle": "Test Consultant",
+        "ResumeId": "Resume-qquest",
+        "Period": "04/2010 - 11/2011",
+        "CompanyLogo": company_logos['cv-qquest-logo.jpg']
+      }
+    ]
 
 class Resume extends Component {
 
@@ -25,7 +118,40 @@ class Resume extends Component {
 
   render() {
 
-	const { t } = this.props;
+  	const { t } = this.props;
+
+  	const Resume_Item = resume_companies.map(function(resume_project){
+
+  	    const openProjectsFromResume = (project) => {
+          ReactGA.event({
+              category: 'KoolIT site click',
+              action: 'Open project from resume',
+              label: project
+          })
+        }
+
+        const current_period = (project) => {
+              return (project.CompanyName === 'KoolIT' || project.CompanyName ==='Zenly')
+                ? project.Period + t('resume_till_now')
+                : project.Period
+        }
+
+        return   <VerticalTimelineElement
+                     className="vertical-timeline-element--work"
+                     id={resume_project.ResumeId}
+                     contentStyle={{ background: 'white', color: 'black' }}
+                     contentArrowStyle={{ borderRight: '7px solid  white' }}
+                     date={current_period(resume_project)}
+                     iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
+                     icon={<img src={resume_project.CompanyLogo} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
+                 >
+                     <h3 className="vertical-timeline-element-title">{resume_project.JobTitle}</h3>
+                     <h4 className="vertical-timeline-element-subtitle">{resume_project.CompanyName}</h4>
+                          <a href="/projects" onClick={(event) => openProjectsFromResume(resume_project.CompanyName)}>
+                              <Button id="resume_project_button" colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button>
+                          </a>
+                 </VerticalTimelineElement>
+    })
 
     return(
       <div className="resumePage">
@@ -196,174 +322,8 @@ class Resume extends Component {
             <h2 style={{fontWeight: "bold"}}>{t('resume_experience_header')}</h2>
 
 <VerticalTimeline>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date={t('resume_till_now')}
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-zenly-logo.png']} style={{width:"100%", height:"100%", borderRadius: "20px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Automation Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Zenly</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Zenly')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
 
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="03/2020 - 04/2020"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-transavia-logo.png']} style={{width:"100%", height:"100%", borderRadius: "20px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Transavia</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Transavia')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="02/2018 - 01/2020"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-rabo-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Rabobank</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Rabobank')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="04/2017 - 02/2018"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-ah-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Ahold Delhaize</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('AH')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="07/2016 - 04/2017"
-    iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
-    icon={<img src={company_logos['cv-fedex-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer / Scrum Master</h3>
-    <h4 className="vertical-timeline-element-subtitle">FedEx</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('FedEx')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="06/2015 - 06/2016"
-    iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
-    icon={<img src={company_logos['cv-tnt-logo.png']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">TNT</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('TNT')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date={t('resume_till_now')}
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-koolit-logo.jpeg']} style={{width:"100%", height:"100%", borderRadius: "15px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">KoolIT</h4>
-	<p>Freelance start</p>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="10/2013 - 05/2015"
-    iconStyle={{ background: 'rgb(255, 255, 255)', color: 'black' }}
-    icon={<img src={company_logos['cv-randstad-logo.png']} style={{width:"100%", height:"105%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">QA Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Randstad</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('Randstad')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="04/2012 - 10/2013"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-minjus-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">Test coordinator</h3>
-    <h4 className="vertical-timeline-element-subtitle">Ministerie van Veiligheid en Justitie</h4>
-     <a href="/projects" onClick={(event) => this.openProjectsFromResume('DJI')}><Button colored style={{marginLeft: "3%", marginTop: "3%", background: "orangered", fontWeight: "bold"}} raised ripple>{t('resume_projects_button')}</Button></a>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="11/2011 - 05/2015"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-cerios-logo.png']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">Testconsultant</h3>
-    <h4 className="vertical-timeline-element-subtitle">Cerios</h4>
-	<p></p>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="08/2010 - 01/2012"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-ing-logo.png']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">Software Tester</h3>
-    <h4 className="vertical-timeline-element-subtitle">ING</h4>
-	<p></p>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="05/2010 - 07/2010"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-adp-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">Software Tester</h3>
-    <h4 className="vertical-timeline-element-subtitle">ADP</h4>
-	<p></p>
-  </VerticalTimelineElement>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'white', color: 'black' }}
-    contentArrowStyle={{ borderRight: '7px solid  white' }}
-    date="04/2010 - 11/2011"
-    iconStyle={{ background: 'white', color: 'black' }}
-    icon={<img src={company_logos['cv-qquest-logo.jpg']} style={{width:"100%", height:"100%", borderRadius: "25px"}} />}
-  >
-    <h3 className="vertical-timeline-element-title">Test Consultant</h3>
-    <h4 className="vertical-timeline-element-subtitle">Qquest</h4>
-	<p></p>
-  </VerticalTimelineElement>
+  {Resume_Item}
 
 </VerticalTimeline>
 

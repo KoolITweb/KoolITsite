@@ -1,8 +1,9 @@
 //make url a variable to be able to test against localhost and against live version
 
 
-describe('My First Test', function() {
-  it('Visits the Kitchen Sink', () => {
+describe('Projects test', function() {
+  it('Open projects from resume', () => {
+    cy.viewport(1400, 700)
     cy.visit('https://koolit.nl')
 
     //click on menu option based on text
@@ -10,25 +11,25 @@ describe('My First Test', function() {
 
     // Should be on a new URL which includes '/commands/actions'
     cy.url().should('include', '/resume')
-
-    // Scroll down to get TNT logo into view
-
-    // Go to projects via projects button on TNT page
-    cy.get('.mdl-button__ripple-container')[5]
-      .click()
-
-    cy.url().should('include', '/projects')
-
-    //check amount of projects is at least 6
-    cy.get('.projects-grid').find('.Card').its('length').should('be.gte', 6)
-
-    //Or to be able to do something with the amount of projects found
-    cy.get('.projects-grid')
-      .find('.Card')
-      .then(projects => {
-        const projectsCount = Cypress.$(projects).length;
-        expect(projectsCount).to.be.at.least(6);
-      });
+//
+//    // Scroll down to get TNT logo into view
+//
+//    // Go to projects via projects button on TNT page
+//    cy.get('.mdl-button__ripple-container')[5]
+//      .click()
+//
+//    cy.url().should('include', '/projects')
+//
+//    //check amount of projects is at least 6
+//    cy.get('.projects-grid').find('.Card').its('length').should('be.gte', 6)
+//
+//    //Or to be able to do something with the amount of projects found
+//    cy.get('.projects-grid')
+//      .find('.Card')
+//      .then(projects => {
+//        const projectsCount = Cypress.$(projects).length;
+//        expect(projectsCount).to.be.at.least(6);
+//      });
 
   })
 })
