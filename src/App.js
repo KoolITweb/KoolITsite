@@ -9,12 +9,20 @@ import ReactGA from 'react-ga';
 import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
 
 
+  const handleClose = () => console.log('closing drawer');
+
   function initGA(){
      ReactGA.initialize('UA-164628388-1')
      ReactGA.pageview(window.location.pathname  + window.location.search)
   }
 
   function App({ t }) {
+
+    const closeDrawer = () => {
+                                      var selectorId = document.querySelector('.mdl-layout');
+                                      selectorId.MaterialLayout.toggleDrawer();
+                                  }
+
 
     const changeLanguage = (lng) => {
       i18n.changeLanguage(lng)
@@ -44,7 +52,7 @@ import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
                         </Navigation>
                     </Header>
                     <Drawer title={<a href ="/"><img className="koolit-hamburgermenu-logo-" style={{ width: '20%' }} src={koolitLogo}/></a>}>
-                        <Navigation>
+                        <Navigation onClick={()=> closeDrawer()}>
                             <Link to="/">{t('menu_home')}</Link>
                             <Link to="/aboutme">{t('menu_about_me')}</Link>
                             <Link to="/resume">{t('menu_resume')}</Link>
