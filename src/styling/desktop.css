@@ -1,0 +1,64 @@
+@media only screen and (min-width: 1024px) {
+
+/*Homepage*/
+
+    .moon{
+     	height: 50%;
+    	width: 30%;
+    }
+
+    .koolit-avatar {
+        width: 300px;
+        margin-top: 10%;
+    }
+
+    .koolit-banner h1 {
+    	font-size: 65px;
+    }
+
+    .koolit-banner hr {
+    	border-top: 5px dotted white;
+    }
+
+    .koolit-banner p {
+     	font-size: 20px;
+    }
+
+    .social-links {
+    	width: 40%;
+    }
+
+    .social-links i{
+    	font-size: 35px;
+    }
+
+    #mobileLanguage {
+        visibility: hidden;
+    }
+
+/*AboutMe*/
+
+
+/*Projects*/
+
+     .Gallery-header {
+       top: 6.6%;
+     }
+
+    .projects_top_header, .projects_header, .Gallery-images, .projects_text {
+    	width: 47rem;
+    }
+
+/*Resume*/
+
+
+/*PPC*/
+
+
+/*Contact*/
+
+    .mdl-list__item {
+        font-size: 30px !important;
+    }
+
+}

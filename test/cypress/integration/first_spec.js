@@ -1,10 +1,10 @@
 //make url a variable to be able to test against localhost and against live version
-
+//update with baseurl
 
 describe('Go Projects Page Test', function() {
   it('Open projects from resume', () => {
     cy.viewport(1400, 900)
-    cy.visit('localhost:8001')
+    cy.visit('')
 
     //click on menu option based on text
     cy.contains('Resume').click()
@@ -86,7 +86,7 @@ describe('Go Projects Page Test', function() {
 describe('PPC page functionality tests', function() {
   it('Can play slidedeck', () => {
     cy.viewport(1400, 900)
-    cy.visit('localhost:8001/ppc')
+    cy.visit('/ppc')
 
     //Slides are present
     cy.get('.ppcPage .gallery-img-container').scrollIntoView()
@@ -193,7 +193,7 @@ describe('PPC page functionality tests', function() {
 describe('Information on about me displays on hover', function() {
   it('Hover on aboutMe page', () => {
     cy.viewport(1400, 900)
-    cy.visit('localhost:8001/aboutme')
+    cy.visit('/aboutme')
 
 
     // Hover over any of the pictures to see text appears
@@ -209,7 +209,7 @@ describe('Information on about me displays on hover', function() {
 describe('Contact info is correct', function() {
   it('Open projects from resume', () => {
     cy.viewport(1400, 900)
-    cy.visit('localhost:8001/contactme')
+    cy.visit('/contactme')
 
     //click on menu option based on text
     cy.contains('Resume').click()

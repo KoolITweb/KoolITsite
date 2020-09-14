@@ -7,6 +7,7 @@
     "test": "test",
     "wdio": "wdio run wdio.conf.js",
     "open_cypress": "cypress open",
+    "test":"npx cypress run --spec \"cypress/integration/first_spec.js\"",
     "lighthouse": ""
   },
   "author": "",
