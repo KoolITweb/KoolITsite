@@ -172,6 +172,10 @@
       padding-right: 1rem !important;
     }
 
+    #contact_block{
+      width: 82%;
+    }
+
     .spaceCabbage{
      	height: 27% !important;
     	width: 50% !important;
