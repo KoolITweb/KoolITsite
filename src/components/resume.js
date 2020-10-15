@@ -314,13 +314,12 @@ class Resume extends Component {
 
         <Grid>
           <Cell className="resume_column_left" col={4}>
-          <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%'}}>
+            <div id="resume_profile" style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%'}}>
                 <div style={{textAlign: 'left' }}>
                   <img
                     src={profilePic}
                     alt="avatar"
-                    style={{marginBottom: '10px', width: '100%', borderRadius: '10px' }}
-                     />
+                  />
                 </div>
 
                 <h4 class="resumeHeaderAdjust" style={{fontWeight: "bold", fontSize: "250%"}}>Daan Koolman</h4>
@@ -336,9 +335,9 @@ class Resume extends Component {
        	         <p>daan@koolit.nl</p>
                 <h5 style={{fontWeight: "bold"}}>{t('resume_web_header')}</h5>
        	         <p>www.koolit.nl</p>
-          </div>
+            </div>
 
-          <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%' }}>
+            <div id="resume_skills" style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%' }}>
                 <img
                  src={company_logos['cv-skills.png']}
                  alt="skills"
@@ -348,9 +347,9 @@ class Resume extends Component {
 
                 {Skills_Item}
 
-          </div>
+            </div>
 
-            <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%' }}>
+            <div id="resume_education" style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%' }}>
                 <img
                   src={company_logos['cv-education.png']}
                   alt="Education"
@@ -362,8 +361,9 @@ class Resume extends Component {
 
             </div>
 
-            </Cell>
-            <Cell className="resume-right-col" col={8}>
+          </Cell>
+
+          <Cell id="resume_experience" className="resume-right-col" col={8}>
               <h2 style={{fontWeight: "bold"}}>{t('resume_experience_header')}</h2>
               <VerticalTimeline>
 
