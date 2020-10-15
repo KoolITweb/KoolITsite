@@ -84,7 +84,7 @@ class Ppc extends Component {
       if(this.state.slideshow===true){
 
         var slider = document.getElementById("slider-img-container");
-        var index = (this.state.currentIndex === 10 ) ? 0 : this.state.currentIndex+1;
+        //var index = (this.state.currentIndex === 10 ) ? 0 : this.state.currentIndex+1;
 
         this.slideTransition(slider);
 
@@ -160,7 +160,7 @@ updateImage = (event ) => {
 
 prevHandler =(event) => {
   var slider = document.getElementById("slider-img-container");
-  var index = (this.state.currentIndex === 0 ) ? 10 : this.state.currentIndex-1;
+  //var index = (this.state.currentIndex === 0 ) ? 10 : this.state.currentIndex-1;
 
   this.slideTransition(slider);
 
@@ -169,7 +169,7 @@ prevHandler =(event) => {
 
 nextHandler =(event) => {
   var slider = document.getElementById("slider-img-container");
-  var index = (this.state.currentIndex === 10 ) ? 0 : this.state.currentIndex+1;
+  //var index = (this.state.currentIndex === 10 ) ? 0 : this.state.currentIndex+1;
 
   this.slideTransition(slider);
 

@@ -313,6 +313,7 @@
 }
 
 
+
 .moon{
 	position: absolute;
 	right: -10%;
@@ -374,18 +375,18 @@
 	margin: 200px;
 }
 
-/*below mdl-layout breaks test-page
+
+
 .mdl-layout {
-	height: fit-content !important;
-}
-*/
 
-.mdl-layout__header-row .mdl-navigation__link {
-	font-weight: bold;
-	font-size: 125%;
 }
 
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+.mdl-layout__inner-container{
+    /*min-height: 100%;*/
+    height: auto !important;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link, .mdl-layout__header-row .mdl-navigation__link  {
 	font-weight: bold;
 	font-size: 125%;
 }

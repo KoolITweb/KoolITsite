@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+//import {css} from './styling';
 import {Header, Navigation, Drawer, Layout, Content, Menu, MenuItem} from 'react-mdl';
 import Main from './components/main'
 import { Link } from 'react-router-dom';
@@ -19,18 +20,18 @@ import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
   function App({ t }) {
 
     const closeDrawer = () => {
-                                      var selectorId = document.querySelector('.mdl-layout');
-                                      selectorId.MaterialLayout.toggleDrawer();
-                                  }
+        var selectorId = document.querySelector('.mdl-layout');
+        selectorId.MaterialLayout.toggleDrawer();
+    }
 
 
     const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng)
-      ReactGA.event({
-        category: 'KoolIT site click',
-        action: 'Change language',
-        label: lng
-      })
+        i18n.changeLanguage(lng)
+        ReactGA.event({
+            category: 'KoolIT site click',
+            action: 'Change language',
+            label: lng
+        })
     }
 
     initGA();

@@ -106,6 +106,128 @@ const resume_companies = [
       }
     ]
 
+const additional_activities = [
+      {
+        "ActivityName": "resume_add_act_title1",
+        "ActivityDescription": "resume_add_act_desc1",
+        "Year": "2019"
+      },
+      {
+        "ActivityName": "resume_add_act_title2",
+        "ActivityDescription": "resume_add_act_desc2",
+        "Year": "2018"
+      },
+      {
+        "ActivityName": "resume_add_act_title3",
+        "ActivityDescription": "resume_add_act_desc3",
+        "Year": "2017"
+      },
+      {
+        "ActivityName": "resume_add_act_title4",
+        "ActivityDescription": "resume_add_act_desc4",
+        "Year": "2016"
+      }
+    ]
+
+
+const education_courses = [
+      {
+        "SchoolName": "Impact Mapping",
+        "SchoolDescription": "Gojko Adzic",
+        "StartYear": "2019"
+      },
+      {
+        "SchoolName": "Programming for everbody (Python)",
+        "SchoolDescription": "Coursera",
+        "StartYear": "2015"
+      },
+      {
+        "SchoolName": "Commercial Skills",
+        "SchoolDescription": "Coen van Veenendaal coaching",
+        "StartYear": "2015"
+      },
+      {
+        "SchoolName": "Datamanagement tooling",
+        "SchoolDescription": "ICTG",
+        "StartYear": "2013"
+      },
+      {
+        "SchoolName": "Prince2 Foundation",
+        "SchoolDescription": "Exin",
+        "StartYear": "2012"
+      },
+      {
+        "SchoolName": "ITIL v3 Foundation",
+        "SchoolDescription": "Exin",
+        "StartYear": "2012"
+      },
+      {
+        "SchoolName": "Agile Foundation",
+        "SchoolDescription": "Agile Consortium",
+        "StartYear": "2013"
+      },
+      {
+        "SchoolName": "Scrum Foundation",
+        "SchoolDescription": "Xebia",
+        "StartYear": "2013"
+      },
+      {
+        "SchoolName": "Consultancy Skills",
+        "SchoolDescription": "Lumage",
+        "StartYear": "2011"
+      },
+      {
+        "SchoolName": "TMap Next Foundation",
+        "SchoolDescription": "Exin",
+        "StartYear": "2010"
+      },
+      {
+        "SchoolName": "Master Organizational & Management Control",
+        "SchoolDescription": "Rijksuniversiteit Groningen",
+        "StartYear": "2007",
+        "EndYear": " - 2009"
+      },
+      {
+        "SchoolName": "Bachelor Business Administration",
+        "SchoolDescription": "Rijksuniversiteit Groningen",
+        "StartYear": "2003",
+        "EndYear": " - 2007"
+      }
+    ]
+
+
+const skills = [
+        {"skill": "resume_skill1",
+         "progress": 80
+        },
+        {"skill": "resume_skill2",
+         "progress": 90
+        },
+        {"skill": "resume_skill3",
+         "progress": 90
+        },
+        {"skill": "resume_skill4",
+         "progress": 80
+        },
+        {"skill": "resume_skill5",
+         "progress": 50
+        },
+        {"skill": "resume_skill6",
+         "progress": 80
+        },
+        {"skill": "resume_skill7",
+         "progress": 80
+        },
+        {"skill": "resume_skill8",
+         "progress": 90
+        },
+        {"skill": "resume_skill9",
+         "progress": 90
+        }
+    ]
+
+
+
 class Resume extends Component {
 
   openProjectsFromResume (project) {
@@ -153,211 +275,109 @@ class Resume extends Component {
                  </VerticalTimelineElement>
     })
 
+  	const Additional_Activities = additional_activities.map(function(additional_activity){
+
+        return <Education
+                    startYear={additional_activity.Year}
+                    schoolName={t(additional_activity.ActivityName)}
+                    schoolDescription={t(additional_activity.ActivityDescription)}
+               />
+    })
+
+  	const Education_Item = education_courses.map(function(education_course){
+
+  	    const with_or_without_endyear = (years) => {
+              return (years.EndYear)
+                ? years.EndYear
+                : ""
+  	    }
+
+        return <Education
+                    startYear={education_course.StartYear}
+                    endYear={with_or_without_endyear(education_course)}
+                    schoolName={education_course.SchoolName}
+                    schoolDescription={education_course.SchoolDescription}
+               />
+    })
+
+  	const Skills_Item = skills.map(function(skill){
+
+        return <Skills
+                skill={t(skill.skill)}
+                progress={skill.progress}
+               />
+    })
+
+
     return(
       <div className="resumePage">
 
         <Grid>
           <Cell className="resume_column_left" col={4}>
           <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%'}}>
-            <div style={{textAlign: 'left' }}>
-              <img
-                src={profilePic}
-                alt="avatar"
-                style={{marginBottom: '10px', width: '100%', borderRadius: '10px' }}
-                 />
+                <div style={{textAlign: 'left' }}>
+                  <img
+                    src={profilePic}
+                    alt="avatar"
+                    style={{marginBottom: '10px', width: '100%', borderRadius: '10px' }}
+                     />
+                </div>
+
+                <h4 class="resumeHeaderAdjust" style={{fontWeight: "bold", fontSize: "250%"}}>Daan Koolman</h4>
+                <h4 class="resumeHeaderAdjust" style={{color: 'grey', fontWeight: "bold", fontSize: "200%"}}>- QA Engineer -</h4>
+                <hr style={{marginTop: '30px', borderTop: '3px solid orangered', width: '100%'}}/>
+           	     <h2 class="resumeHeaderAdjust" style={{fontWeight: "bold"}}>{t('resume_Profile_header')}</h2>
+                <hr style={{borderTop: '3px solid orangered', width: '100%'}}/>
+                <h5 style={{fontWeight: "bold"}}>{t('resume_address_header')}</h5>
+          	      <p>Amsterdam</p>
+                <h5 style={{fontWeight: "bold"}}>{t('resume_phone_header')}</h5>
+        	        <p>+31-649966968</p>
+                <h5 style={{fontWeight: "bold"}}>{t('resume_mail_header')}</h5>
+       	         <p>daan@koolit.nl</p>
+                <h5 style={{fontWeight: "bold"}}>{t('resume_web_header')}</h5>
+       	         <p>www.koolit.nl</p>
+          </div>
+
+          <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%' }}>
+                <img
+                 src={company_logos['cv-skills.png']}
+                 alt="skills"
+                 style={{height: '75%', width: '100%', borderRadius: '10px' }}
+                />
+                <h2 style={{fontWeight: "bold"}}>{t('resume_skill_header')}</h2>
+
+                {Skills_Item}
+
+          </div>
+
+            <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%' }}>
+                <img
+                  src={company_logos['cv-education.png']}
+                  alt="Education"
+                  style={{height: '75%', width: '100%', borderRadius: '10px' }}
+                   />
+               <h2 style={{fontWeight: "bold"}}>{t('resume_education_header')}</h2>
+
+               {Education_Item}
+
             </div>
 
-            <h4 class="resumeHeaderAdjust" style={{fontWeight: "bold", fontSize: "250%"}}>Daan Koolman</h4>
-            <h4 class="resumeHeaderAdjust" style={{color: 'grey', fontWeight: "bold", fontSize: "200%"}}>- QA Engineer -</h4>
-            <hr style={{marginTop: '30px', borderTop: '3px solid orangered', width: '100%'}}/>
-           	 <h2 class="resumeHeaderAdjust" style={{fontWeight: "bold"}}>{t('resume_Profile_header')}</h2>
-            <hr style={{borderTop: '3px solid orangered', width: '100%'}}/>
-            <h5 style={{fontWeight: "bold"}}>{t('resume_address_header')}</h5>
-          	  <p>Amsterdam</p>
-            <h5 style={{fontWeight: "bold"}}>{t('resume_phone_header')}</h5>
-        	    <p>+31-649966968</p>
-            <h5 style={{fontWeight: "bold"}}>{t('resume_mail_header')}</h5>
-       	     <p>daan@koolit.nl</p>
-            <h5 style={{fontWeight: "bold"}}>{t('resume_web_header')}</h5>
-       	     <p>www.koolit.nl</p>
-            </div>
-     <div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%' }}>
-              <img
-                src={company_logos['cv-skills.png']}
-                alt="skills"
-                style={{height: '75%', width: '100%', borderRadius: '10px' }}
-                 />
-            <h2 style={{fontWeight: "bold"}}>{t('resume_skill_header')}</h2>
-                          <Skills
-                            skill={t('resume_skill1')}
-                            progress={80}
-                          />
-                          <Skills
-                              skill={t('resume_skill2')}
-                              progress={90}
-                          />
-                          <Skills
-                              skill={t('resume_skill3')}
-                              progress={90}
-                          />
-                          <Skills
-                              skill={t('resume_skill4')}
-                              progress={80}
-                          />
-                          <Skills
-                            skill={t('resume_skill5')}
-                            progress={50}
-                          />
-                          <Skills
-                              skill={t('resume_skill6')}
-                              progress={80}
-                          />
-                          <Skills
-                              skill={t('resume_skill7')}
-                              progress={80}
-                          />
-                          <Skills
-                              skill={t('resume_skill8')}
-                              progress={90}
-                          />
-                          <Skills
-                              skill={t('resume_skill9')}
-                              progress={90}
-                          />
-</div>
-<div style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%' }}>
-              <img
-                src={company_logos['cv-education.png']}
-                alt="Education"
-                style={{height: '75%', width: '100%', borderRadius: '10px' }}
-                 />
-        <h2 style={{fontWeight: "bold"}}>{t('resume_education_header')}</h2>
-                    <Education
-                      startYear={2019}
-                      schoolName="Impact Mapping"
-                      schoolDescription="Goijko Adzic"
-                    />
-            <Education
-              startYear={2015}
-              
-              schoolName="Programming for everbody (Python)"
-              schoolDescription="Coursera"
-            />
+            </Cell>
+            <Cell className="resume-right-col" col={8}>
+              <h2 style={{fontWeight: "bold"}}>{t('resume_experience_header')}</h2>
+              <VerticalTimeline>
 
-            <Education
-              startYear={2015}
-              
-              schoolName="Commercial Skills"
-              schoolDescription="Coen van Veenendaal coaching"
-            />
+                  {Resume_Item}
 
-            <Education
-              startYear={2013}
-              
-              schoolName="Datamanagement tooling"
-              schoolDescription="ICTG"
-            />
+              </VerticalTimeline>
 
-            <Education
-              startYear={2012}
-              
-              schoolName="Prince2 Foundation"
-              schoolDescription="Exin"
-            />
-
-            <Education
-              startYear={2012}
-              
-              schoolName="ITIL v3 Foundation"
-              schoolDescription="Exin"
-            />
-
-            <Education
-              startYear={2012}
-              
-              schoolName="Agile Foundation"
-              schoolDescription="Agile Consortium"
-            />
-
-            <Education
-              startYear={2012}
-              
-              schoolName="Scrum Foundation"
-              schoolDescription="Xebia"
-            />
-
-            <Education
-              startYear={2011}
-              
-              schoolName="Consultancy Skills"
-              schoolDescription="Lumage"
-            />
-
-            <Education
-              startYear={2010}
-              
-              schoolName="TMap Next Foundation"
-              schoolDescription="Exin"
-            />
-
-            <Education
-              startYear={2007}
-              endYear={-2009}
-              schoolName="Master Organizational & Management Control"
-              schoolDescription="Rijksuniversiteit Groningen"
-            />
-
-            <Education
-              startYear={2003}
-              endYear={-2007}
-              schoolName="Bachelor Business Administration"
-              schoolDescription="Rijksuniversiteit Groningen"
-            />
-</div>
-
-
-
-</Cell>
-          <Cell className="resume-right-col" col={8}>
-            <h2 style={{fontWeight: "bold"}}>{t('resume_experience_header')}</h2>
-
-<VerticalTimeline>
-
-  {Resume_Item}
-
-</VerticalTimeline>
-
-        <hr style={{borderTop: '4px solid white'}} />
-
+              <hr style={{borderTop: '4px solid white'}} />
               <h2 style={{fontWeight: "bold"}}>{t('resume_activities_header')}</h2>
-            <div className="education">
-            <Education
-              startYear={2019}
-              schoolName={t('resume_add_act_title1')}
-              schoolDescription={t('resume_add_act_desc1')}
-            />
+              <div className="education">
 
-            <Education className="education"
-              startYear={2018}
-              
-              schoolName={t('resume_add_act_title2')}
-              schoolDescription={t('resume_add_act_desc2')}
-            />
+                  {Additional_Activities}
 
-            <Education className="education"
-              startYear={2017}
-              
-              schoolName={t('resume_add_act_title3')}
-              schoolDescription={t('resume_add_act_desc3')}
-            />
-
-            <Education className="education"
-              startYear={2016}
-              
-              schoolName={t('resume_add_act_title4')}
-              schoolDescription={t('resume_add_act_desc4')}
-            />
-            </div>
+              </div>
           </Cell>
         </Grid>
       </div>
