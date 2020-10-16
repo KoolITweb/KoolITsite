@@ -315,7 +315,7 @@ class Resume extends Component {
         <Grid>
           <Cell className="resume_column_left" col={4}>
             <div id="resume_profile" style={{ backgroundColor: 'rgb(255,255,255)', borderRadius: '10px', padding: '5%', marginBottom: '10%'}}>
-                <div style={{textAlign: 'left' }}>
+                <div id="resume_photo_container" style={{textAlign: 'left'}}>
                   <img
                     src={profilePic}
                     alt="avatar"
