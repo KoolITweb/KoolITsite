@@ -3,6 +3,9 @@ import { Grid, Cell } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
 import profilePic from '../images/profile/avataaars.png'
 import earth from '../images/earth1.png';
+import rocket from '../images/rocket.png';
+import fire from '../images/fire.png';
+import astronaut from '../images/astronaut.png';
 import ReactGA from 'react-ga'
 
 
@@ -16,6 +19,7 @@ openURLLink (urlName) {
   })
 }
 
+
 	render() {
 
 	    const { t } = this.props;
@@ -26,13 +30,12 @@ openURLLink (urlName) {
 				<Grid className='landing-grid'>
 
 					<Cell col={12}>
-						<img className="moon" src={earth} alt=""/>
-                    	<div class="stars"></div>
+						<img className="moon" id="moon" src={earth} alt=""/>
+						<div class='nebula' id='nebula'></div>
+                    	<div class="stars" id="stars"></div>
                         <div class="twinkling"></div>
                         <div class="clouds"></div>
 						<img
-							//src="https://image.freepik.com/vrije-vector/programmatool-van-softwaretaal_24877-763.jpg"
-							//src="https://media-exp1.licdn.com/dms/image/C4E0BAQFYY0NadTysuw/company-logo_200_200/0?e=1588809600&v=beta&t=Pz2VxHQUqeq6AuoSVzILABelw0HbwCZzaudtwDvcXVg"
 							src={profilePic}
 							alt="avatar"
 							className="koolit-avatar"
@@ -62,7 +65,19 @@ openURLLink (urlName) {
 
 						</div>
 						</div>
+
+						<div id="outerspace">
+                          <div class="firerocket" id="rocket-id">
+                            <img class="fire" src={fire} alt="fire"/>
+                            <img class="rocket" src={rocket} alt="rocket"/>
+                          </div>
+                          <div class="astronaut">
+                            <img className="astronaut" src={astronaut} alt="astronaut"/>
+                          </div>
+                        </div>
+
 					</Cell>
+
 				</Grid>
 
 			</div>
