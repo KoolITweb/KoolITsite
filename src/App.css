@@ -431,7 +431,7 @@
   }
 
    #outerspace div.astronaut {
-     animation: astronautmove 180s ease-in-out infinite;
+     animation: astronautmove 150s ease-in-out infinite;
    }
 
    #outerspace div.astronaut img{
@@ -441,8 +441,8 @@
 @keyframes astronautmove{
     0% { transform: translate(-175%, 400%); }
    25% { transform: translate(0%, 300%); }
-   35% { transform: translate(80%, -120%); }
-   45% { transform: translate(165%, -100%); }
+   35% { transform: translate(80%, -370%); }
+   45% { transform: translate(165%, -220%); }
    55% { transform: translate(200%, 200%); }
    65% { transform: translate(250%, 500%); }
    80% { transform: translate(200%, 1100%); }
