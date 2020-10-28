@@ -6,6 +6,7 @@ import earth from '../images/earth1.png';
 import rocket from '../images/rocket.png';
 import fire from '../images/fire.png';
 import astronaut from '../images/astronaut.png';
+import ufo from '../images/ufo.png';
 import ReactGA from 'react-ga'
 
 
@@ -32,9 +33,7 @@ openURLLink (urlName) {
 					<Cell col={12}>
 						<img className="moon" id="moon" src={earth} alt=""/>
 						<div class='nebula' id='nebula'></div>
-                    	<div class="stars" id="stars"></div>
                         <div class="twinkling"></div>
-                        <div class="clouds"></div>
 						<img
 							src={profilePic}
 							alt="avatar"
@@ -73,6 +72,9 @@ openURLLink (urlName) {
                           </div>
                           <div class="astronaut">
                             <img className="astronaut" src={astronaut} alt="astronaut"/>
+                          </div>
+                          <div class="ufo">
+                            <img className="ufo" src={ufo} alt="ufo"/>
                           </div>
                         </div>
 

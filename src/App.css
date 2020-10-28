@@ -52,6 +52,7 @@
         height: 20% !important;
     }
 
+
 /*AboutMe*/
 
     #aboutPage {
@@ -346,6 +347,7 @@
     object-fit: cover;
     opacity: 0.9;
     animation: floatAvatar 5s ease-in-out infinite;
+    background: rgba(2,0,36,.6);
 }
 
 @keyframes floatAvatar {
@@ -456,11 +458,72 @@
    100% { transform: rotate(360deg) rotate3d(1, 1, 1, 360deg);; }
 }
 
+   #outerspace div.ufo {
+     animation: ufomove 20s ease-in-out infinite;
+   }
+
+  div.ufo {
+    position: absolute;
+    bottom: 510px;
+    left: 20px;
+    z-index: 20;
+  }
+
+  div.ufo img {
+    width: 30%;
+    height: 30%;
+  }
+
+@keyframes ufomove{
+    0% { transform: translate(220%, -800%);
+         opacity:1;}
+   15% { transform: translate(210%, 0%); }
+   25% { transform: translate(275%, 300%); }
+   28% { opacity:1;}
+   29% { opacity:0;}
+   30% { opacity:1;}
+   31% { opacity:0;}
+   32% { opacity:1;}
+   33% { transform: translate(275%, 300%);
+         opacity:0;}
+   34% { transform: translate(50%, -369%);
+         opacity:0;}
+   35% { opacity:1; }
+   36% { opacity:0; }
+   37% { opacity:1; }
+   38% { opacity:0; }
+   39% { transform: translate(50%, -370%);
+         opacity:1; }
+   45% { transform: translate(20%, -470%);}
+   50% { transform: translate(-20%, -220%);}
+   55% { transform: translate(-60%, 200%); }
+   59% { transform: translate(0%,  500%);}
+   60% { opacity:1;}
+   61% { opacity:0;}
+   62% { opacity:1;}
+   63% { opacity:0;}
+   64% { opacity:1;}
+   65% { opacity:0;}
+   66% { opacity:1; }
+   67% { transform: translate(0%, 500%);
+         opacity:0; }
+   68% { transform: translate(250%, 550%);
+         opacity:0; }
+   69% { opacity:1; }
+   70% { opacity:0; }
+   71% { transform: translate(250%, 550%);
+         opacity:1; }
+   75% { transform: translate(250%, 450%)};
+   80% { transform: translate(300%, 400%); }
+   90% { transform: translate(350%, 600%); }
+   100% { transform: translate(550%, 700%); }
+  }
+
 
 .koolit-banner {
-	background-color: black;
+	background-color: rgba(2,0,36,1);
     width: 80%;
-	opacity: .7;
+	opacity: .71;
     border-radius: 15px;
     margin-top: 3%;
     margin-left: auto;
@@ -502,6 +565,9 @@
 	margin: 200px;
 }
 
+.mdl-layout__header{
+    background-color: transparent !important;
+}
 
 .mdl-layout__inner-container{
     min-height: 100%;
@@ -514,6 +580,7 @@
 }
 
 
+
 translate_option{
 	background-color: transparent;
 	border-radius: 15px;
@@ -521,7 +588,9 @@ translate_option{
 
 .material-icons{
 	color: white;
-	font-size: 30px !important;
+	font-size: 45px !important;
+	margin-left: 10%;
+	margin-top: 5%;
 }
 /* homePage css*/
 
@@ -614,26 +683,29 @@ translate_option{
 }
 
 .nebula {
- background: black url("https://media.istockphoto.com/photos/abstract-background-black-dark-low-poly-triangles-geometric-shapes-picture-id1205236508?k=6&m=1205236508&s=170667a&w=0&h=cY1AslTyiiA1xLk0ByQzLRpk_gJdxPSyvMLBR8fqFVk=") repeat;
- position: absolute;
+    background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(16,4,119,1) 33%, rgba(56,14,168,1) 66%, rgba(85,88,252,1) 80%);
+    position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	display: block;
-  	z-index: 0;
+  	z-index: 20;
+  	width: 110%;
+  	height: 110%;
+  	opacity: .3;
 }
 
-.stars {
- background: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png") repeat;
- position: absolute;
+/*.stars {
+    background: black url("https://galaxy.fili.nl/images/stars.png") repeat;
+    position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	display: block;
-  	z-index: 0;
-}
+  	z-index: 10;
+}*/
 
 .twinkling{
 	width:10000px;
@@ -644,7 +716,7 @@ translate_option{
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 20;
+    z-index: 10;
 
     -moz-animation:move-background 70s linear infinite;
     -ms-animation:move-background 70s linear infinite;
@@ -654,6 +726,7 @@ translate_option{
 
 }
 
+/*
 .clouds{
 	width:10000px;
 	height: 100%;
@@ -670,7 +743,7 @@ translate_option{
     -o-animation:move-background 150s linear infinite;
     -webkit-animation:move-background 150s linear infinite;
     animation:move-background 50s linear infinite;
-}
+}*/
 
 
 /* about page */
