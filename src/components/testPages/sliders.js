@@ -1,6 +1,5 @@
 import React, { Component, link } from 'react';
 import { withNamespaces } from 'react-i18next';
-import {Helmet} from "react-helmet";
 import construction from '../../images/under_construction.png';
 
 

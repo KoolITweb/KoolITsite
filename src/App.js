@@ -10,8 +10,6 @@ import ReactGA from 'react-ga';
 import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
 
 
-  const handleClose = () => console.log('closing drawer');
-
   function initGA(){
      ReactGA.initialize('UA-164628388-1')
      ReactGA.pageview(window.location.pathname  + window.location.search)
@@ -38,6 +36,8 @@ import koolitLogo from './images/organizations/koolit-logo-menu-bar.jpeg';
 
       return (
             <div className="KoolIT_web">
+                <div class='spaceColor' id='spaceColor'></div>
+                <div class="twinkling"></div>
                 <Layout>
             		<Header className='header-color' style={{ backgroundColor: "transparant"}} title={<a href ="/"><img className="koolit-menubar-logo" style={{ width: '20%', borderRadius: '7px' }} src={koolitLogo}/></a>} scroll>
                     </Header>

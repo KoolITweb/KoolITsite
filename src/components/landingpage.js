@@ -7,8 +7,8 @@ import rocket from '../images/rocket.png';
 import fire from '../images/fire.png';
 import astronaut from '../images/astronaut.png';
 import ufo from '../images/ufo.png';
-import ReactGA from 'react-ga'
-
+import ReactGA from 'react-ga';
+//import Astronaut from './astronaut';
 
 class Landing extends Component{
 
@@ -19,7 +19,6 @@ openURLLink (urlName) {
       label: urlName
   })
 }
-
 
 	render() {
 
@@ -32,8 +31,6 @@ openURLLink (urlName) {
 
 					<Cell col={12}>
 						<img className="moon" id="moon" src={earth} alt=""/>
-						<div class='nebula' id='nebula'></div>
-                        <div class="twinkling"></div>
 						<img
 							src={profilePic}
 							alt="avatar"
@@ -85,6 +82,7 @@ openURLLink (urlName) {
 			</div>
 		)
 	}
+
 }
 
 export default withNamespaces()(Landing);

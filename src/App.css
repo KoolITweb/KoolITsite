@@ -459,7 +459,7 @@
 }
 
    #outerspace div.ufo {
-     animation: ufomove 20s ease-in-out infinite;
+     animation: ufomove 90s ease-in-out infinite;
    }
 
   div.ufo {
@@ -475,29 +475,29 @@
   }
 
 @keyframes ufomove{
-    0% { transform: translate(220%, -800%);
+    0% { transform: translate(50%, -800%);
          opacity:1;}
-   15% { transform: translate(210%, 0%); }
-   25% { transform: translate(275%, 300%); }
-   28% { opacity:1;}
-   29% { opacity:0;}
-   30% { opacity:1;}
+   15% { transform: translate(-20%, 0%); }
+   25% { transform: translate(-50%, 300%); }
+   29.5% { opacity:1;}
+   30% { opacity:0;}
+   30.5% { opacity:1;}
    31% { opacity:0;}
-   32% { opacity:1;}
-   33% { transform: translate(275%, 300%);
+   31.5% { opacity:1;}
+   32% { transform: translate(-50%, 300%);
          opacity:0;}
-   34% { transform: translate(50%, -369%);
+   33% { transform: translate(240%, -250%);
          opacity:0;}
-   35% { opacity:1; }
-   36% { opacity:0; }
-   37% { opacity:1; }
-   38% { opacity:0; }
-   39% { transform: translate(50%, -370%);
+   33.5% { opacity:1; }
+   34% { opacity:0; }
+   34.5% { opacity:1; }
+   35% { opacity:0; }
+   35.5% { transform: translate(240%, -250%);
          opacity:1; }
-   45% { transform: translate(20%, -470%);}
-   50% { transform: translate(-20%, -220%);}
-   55% { transform: translate(-60%, 200%); }
-   59% { transform: translate(0%,  500%);}
+   42% { transform: translate(225%, -150%);}
+   48% { transform: translate(210%, -80%);}
+   55% { transform: translate(260%, 200%); }
+   59% { transform: translate(205%,  300%);}
    60% { opacity:1;}
    61% { opacity:0;}
    62% { opacity:1;}
@@ -505,18 +505,18 @@
    64% { opacity:1;}
    65% { opacity:0;}
    66% { opacity:1; }
-   67% { transform: translate(0%, 500%);
+   67% { transform: translate(205%, 300%);
          opacity:0; }
-   68% { transform: translate(250%, 550%);
+   68% { transform: translate(50%, 350%);
          opacity:0; }
    69% { opacity:1; }
    70% { opacity:0; }
-   71% { transform: translate(250%, 550%);
+   71% { transform: translate(50%, 350%);
          opacity:1; }
-   75% { transform: translate(250%, 450%)};
-   80% { transform: translate(300%, 400%); }
-   90% { transform: translate(350%, 600%); }
-   100% { transform: translate(550%, 700%); }
+   75% { transform: translate(20%, 450%)};
+   80% { transform: translate(0%, 400%); }
+   90% { transform: translate(-50%, 300%); }
+   100% { transform: translate(-190%, 700%); }
   }
 
 
@@ -578,8 +578,6 @@
 	font-weight: bold;
 	font-size: 125%;
 }
-
-
 
 translate_option{
 	background-color: transparent;
@@ -682,7 +680,7 @@ translate_option{
 	right: 0;
 }
 
-.nebula {
+.spaceColor {
     background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(16,4,119,1) 33%, rgba(56,14,168,1) 66%, rgba(85,88,252,1) 80%);
     position: absolute;
 	top: 0;
@@ -690,7 +688,7 @@ translate_option{
 	left: 0;
 	right: 0;
 	display: block;
-  	z-index: 20;
+  	z-index: 0;
   	width: 110%;
   	height: 110%;
   	opacity: .3;
@@ -716,7 +714,7 @@ translate_option{
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: -1;
 
     -moz-animation:move-background 70s linear infinite;
     -ms-animation:move-background 70s linear infinite;
@@ -1220,7 +1218,6 @@ div.item *{
   position: fixed;
   left: 0;
   right: 0;
-  background-color: black;
   padding-bottom: 4rem;
 }
 .Gallery-close {
@@ -1228,7 +1225,6 @@ div.item *{
   right: 1rem;
   top: 1rem;
   font-size: 300%;
-  opacity: 0.5;
   cursor: pointer;
 }
 .Gallery-close:hover {
@@ -1309,7 +1305,7 @@ div.item *{
 
 
 .resume-right-col {
-  background: rgb(0,0,0,.92);
+  background: rgba(2,0,36,.92);
   color: white;
   padding: 2em;
   border-radius: 15px;
@@ -1393,13 +1389,8 @@ div.item *{
   justify-content: center;
   width: 80%;
   height: 550px;
-  background: white;
   color: black;
   margin-bottom: 20p;
-}
-
-#contact_block{
-  animation: floatAvatar 5s ease-in-out infinite;
 }
 
 .contact-grid h2 {
@@ -1440,12 +1431,59 @@ div.item *{
 #contact_block{
   width: 82%;
   z-index: 30;
-  background: rgb(0,0,0);
+  background: rgba(2,0,36,1);
   color: white;
   opacity: .8;
   position: absolute;
+  animation: floatAvatar 5s ease-in-out infinite;
 }
 
+.contact_logo_koolit{
+    width: 7.5%;
+    height: 10%;
+    border-radius: 15px;
+    opacity: .5 !important;
+}
+
+#koolitlogo-0{
+    margin-right: 40%;
+    animation: rotatelogo_otherway 100s ease-in-out infinite;
+}
+
+#koolitlogo-1{
+    margin-top: -10%;
+    animation: rotatelogo 100s ease-in-out infinite;
+}
+
+#koolitlogo-2{
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: -10%;
+    animation: rotatelogo 72s ease-in-out infinite;
+}
+
+#koolitlogo-3{
+    margin-left: -25%;
+    margin-right: 20%;
+    margin-top: 110%;
+    animation: rotatelogo_otherway 72s ease-in-out infinite;
+}
+
+@keyframes rotatelogo{
+    0% { transform: translate(-9000%, -300%), rotate3d(1, 0, 1, 0deg); opacity: 0;}
+    15% { transform: translate(-8000%, -300%), rotate3d(1, 0, 1, 0deg); opacity: 1;}
+    25% { transform: translate(-7000%, 300%), rotate3d(1, 0, 1, 1080deg);}
+    50% { transform: translate(-5000%, 900%), rotate3d(1, 0, 1, 0deg);}
+   100% { transform: translate(-2000%, 2000%) rotate3d(1, 0, 1, 1080deg);}
+}
+
+@keyframes rotatelogo_otherway{
+    0% { transform: translate(-9000%, 300%), rotate3d(1, 0, 1, 0deg); opacity: 0;}
+    15% { transform: translate(-6000%, 300%), rotate3d(1, 0, 1, 0deg); opacity: 1;}
+    25% { transform: translate(-4000%, -300%), rotate3d(1, 0, 1, 1080deg);}
+    50% { transform: translate(500%, -900%), rotate3d(1, 0, 1, 0deg);}
+   100% { transform: translate(2000%, -2000%) rotate3d(1, 0, 1, 1080deg);}
+}
 
 /* test page */
 
@@ -1615,7 +1653,6 @@ div.item *{
 }
 
 .ppcHeader {
-	background-color: black;
     width: 87%;
 	opacity: .7;
     margin-top: 3%;
@@ -1640,6 +1677,7 @@ div.item *{
 }
 
 /*background everywhere*/
+
 
 body {
  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;

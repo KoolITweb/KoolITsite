@@ -9,7 +9,6 @@ import {
 } from 'react-accessible-accordion';
 import { AwesomeButton } from 'react-awesome-button';
 import { withNamespaces } from 'react-i18next';
-import {Helmet} from "react-helmet";
 
 
 function AButton() {
