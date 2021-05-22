@@ -5,19 +5,26 @@ import Skills from './skills';
 import { withNamespaces } from 'react-i18next';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import profilePic from '../images/profile/Daan.jpg';
+import profilePic from '../../images/profile/Daan.jpg';
 import ReactGA from 'react-ga'
-import importAll from '../importAll';
+import importAll from '../../importAll';
 
 
-const company_logos = importAll(require.context('../images/organizations', false, /\.(png|jpe?g)$/));
+const company_logos = importAll(require.context('../../images/organizations', false, /\.(png|jpe?g)$/));
 
 const resume_companies = [
+      {
+        "CompanyName": "DPG",
+        "JobTitle": "QA Engineer",
+        "ResumeId": "Resume-dpg",
+        "Period": "10/2020 - ",
+        "CompanyLogo": company_logos['cv-dpgmedia-logo.png']
+      },
       {
         "CompanyName": "Zenly",
         "JobTitle": "QA Automation Engineer",
         "ResumeId": "Resume-zenly",
-        "Period": "04-2020 - ",
+        "Period": "04/2020 - 10/2020",
         "CompanyLogo": company_logos['cv-zenly-logo.png']
       },
       {
@@ -253,7 +260,7 @@ class Resume extends Component {
         }
 
         const current_period = (project) => {
-              return (project.CompanyName === 'KoolIT' || project.CompanyName ==='Zenly')
+              return (project.CompanyName === 'KoolIT' || project.CompanyName ==='DPG')
                 ? project.Period + t('resume_till_now')
                 : project.Period
         }

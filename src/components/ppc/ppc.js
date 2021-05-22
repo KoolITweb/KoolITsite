@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { withNamespaces } from 'react-i18next';
-import '../slider.css';
-import importAll from '../importAll';
+import './slider.css';
+import importAll from '../../importAll';
 
 
-const images = importAll(require.context('../images/ppc', false, /\.(png|jpe?g)$/));
+const images = importAll(require.context('../../images/ppc', false, /\.(png|jpe?g)$/));
 
 
 const imageDescription = [

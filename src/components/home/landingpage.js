@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { Grid, Cell } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
-import profilePic from '../images/profile/avataaars.png'
-import earth from '../images/earth1.png';
-import rocket from '../images/rocket.png';
-import fire from '../images/fire.png';
-import astronaut from '../images/astronaut.png';
-import ufo from '../images/ufo.png';
+import profilePic from '../../images/profile/avataaars.png'
+import earth from '../../images/earth1.png';
+import rocket from '../../images/rocket.png';
+import fire from '../../images/fire.png';
+import astronaut from '../../images/astronaut.png';
+import ufo from '../../images/ufo.png';
 import ReactGA from 'react-ga';
 //import Astronaut from './astronaut';
 

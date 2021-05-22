@@ -2,14 +2,32 @@ import React, { Component } from 'react';
 import { withNamespaces } from 'react-i18next';
 import { Button } from 'react-mdl';
 import ReactGA from 'react-ga';
-import importAll from '../importAll';
+import importAll from '../../importAll';
 
 
-const project_pictures = importAll(require.context('../images/organizations/projects', false, /\.(png|jpe?g)$/));
-const tools = importAll(require.context('../images/tools', false, /\.(png|jpe?g)$/));
+const project_pictures = importAll(require.context('../../images/organizations/projects', false, /\.(png|jpe?g)$/));
+const tools = importAll(require.context('../../images/tools', false, /\.(png|jpe?g)$/));
 
 
 const completeProject = [
+      {
+        "ProjectName": "DPG",
+        "ProjectCard": "card-DPG",
+        "ProjectGalId": "gallery-DPG",
+        "ProjectDesc": "project_dpg_desc",
+        "ProjectResults": "project_dpg_results",
+        "ProjectsCardImage": project_pictures['projects_dpg.png'],
+        "ProjectGalMainImage": project_pictures['proj-dpg-app.jpg'],
+        "ProjectGalSubImage1": project_pictures['proj-dpg-ad.png'],
+        "ProjectGalSubImage2": project_pictures['proj-dpg-hln.png'],
+        "Tools": [
+            tools['tool-bitrise.png'],
+            tools['tool-firebase.png'],
+            tools['tool-jira-conf.png'],
+            tools['tool-xcode.webp'],
+            tools['tool-androidstudio.png']
+        ]
+      },
       {
         "ProjectName": "Zenly",
         "ProjectCard": "card-Zenly",

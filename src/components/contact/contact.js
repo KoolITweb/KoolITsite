@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 import { withNamespaces } from 'react-i18next';
-import cabbage from '../images/Cabbage_detail.png';
-import koolitLogo from '../images/organizations/koolit-logo-menu-bar.jpeg';
+import cabbage from '../../images/Cabbage_detail.png';
+import koolitLogo from '../../images/organizations/koolit-logo-menu-bar.jpeg';
 
 class Contact extends Component {
 
