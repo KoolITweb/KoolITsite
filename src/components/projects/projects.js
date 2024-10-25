@@ -24,8 +24,10 @@ const completeProject = [
             tools['tool-bitrise.png'],
             tools['tool-firebase.png'],
             tools['tool-jira-conf.png'],
-            tools['tool-xcode.webp'],
-            tools['tool-androidstudio.png']
+            tools['tool-xcode.png'],
+            tools['tool-androidstudio.png'],
+            tools['tool-looker.png'],
+            tools['tool-postman.jpg']
         ]
       },
       {
@@ -53,7 +55,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -82,7 +84,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -111,7 +113,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -140,7 +142,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -169,7 +171,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -198,7 +200,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -227,7 +229,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       },
@@ -256,7 +258,7 @@ const completeProject = [
             tools['tool-Pycharm.png'],
             tools['tool-python.png'],
             tools['tool-testrail.jpg'],
-            tools['tool-xcode.webp'],
+            tools['tool-xcode.png'],
             tools['tool-androidstudio.png']
         ]
       }
