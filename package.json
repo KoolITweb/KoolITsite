@@ -20,7 +20,7 @@
     "react-i18next": "^9.0.10",
     "react-mdl": "^2.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^1.2.1",
     "react-vertical-timeline-component": "^2.6.2",
     "vertical-timeline-component-for-react": "^1.0.7"
