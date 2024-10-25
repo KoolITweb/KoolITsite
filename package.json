@@ -10,7 +10,7 @@
     "i18next": "^19.8.3",
     "jquery": "^3.5.1",
     "node-sass": "^9.0.0",
-    "npm": "^6.14.18",
+    "npm": "^10.9.0",
     "react": "^16.14.0",
     "react-accessible-accordion": "^3.3.3",
     "react-awesome-button": "^6.5.1",
