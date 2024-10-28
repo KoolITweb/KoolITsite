@@ -32,3 +32,8 @@ build/*
 screenshot_fails/*
 test/cypress/integration/examples
 test/cypress/videos
+
+selenium-java/target
+selenium-java/.idea
+selenium-java/*.iml
+selenium-java/test-output
