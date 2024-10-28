@@ -1,0 +1,213 @@
+@media only screen and (max-width: 767px) {
+
+/*AboutMe*/
+
+    #aboutPage {
+        margin-top: 15%;
+        display: block !important;
+        margin-left: 5%;
+    }
+
+    div.item{
+        margin: 5% !important;
+    }
+
+    div.item.aboutme i p {
+        font-size: 14px !important;
+        width: 600% !important;
+        margin-left: -250% !important;
+    }
+
+    div.item i {
+        font-size: 20px !important;
+        width: 40px !important;
+        height: 40px !important;
+        line-height: 40px !important;
+    }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+/*AboutMe*/
+
+    #aboutPage {
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    div.item {
+        flex-basis: 45% !important;
+    }
+
+
+@media only screen and (min-width: 1024px) {
+
+/*AboutMe*/
+
+
+
+/* about page */
+
+.h1 {
+  font-family: Raleway;
+  text-align: center;
+}
+
+#aboutPage {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 5%;
+}
+
+div.item {
+  flex-basis: 25%;
+  position: relative;
+  float: left;
+  margin: 2.5%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+div.item * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+div.item img {
+  vertical-align: top;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 10px rgba(150,150,150,.7);
+    width: 100%;
+    height: 100%
+}
+
+div.item i {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+}
+
+div.item.aboutme {
+  background-color: #797d78;
+}
+
+div.item.aboutme i {
+  color: #34495e;
+}
+
+div.item.aboutme i p {
+  color: white;
+  width: 400%;
+  margin-left: -150%;
+  margin-top: 20%;
+  font-size: 45%;
+  font-weight: bold;
+}
+
+div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(1.2);
+}
+
+div.item i {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+div.item:hover i {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+div.item *{
+  transition: all ease-in-out 0.5s;
+}
+
+
+
+/*background everywhere*/
+
+
+body {
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 0;
+}
+
+  @-webkit-keyframes Background {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  @-moz-keyframes Background {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  @keyframes Background {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  .full-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(https://i.imgur.com/wCG2csZ.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    /* works with row or column */
+
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+
+
+
+
