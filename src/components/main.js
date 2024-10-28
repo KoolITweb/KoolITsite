@@ -1,11 +1,11 @@
 import React from 'react';
-import LandingPage from './landingpage';
-import About from './aboutme';
-import Resume from './resume';
-import Projects from './projects';
-import Contact from './contact';
-import Test from './testPage';
-import Ppc from './ppc';
+import LandingPage from './home/landingpage';
+import About from './aboutme/aboutme';
+import Resume from './resume/resume';
+import Projects from './projects/projects';
+import Contact from './contact/contact';
+import Test from './testPage/testPage';
+import Ppc from './ppc/ppc';
 import Buttons from './testPages/buttons';
 import Dropdown from './testPages/dropdown';
 import Login from './testPages/login';
@@ -24,13 +24,13 @@ const Main = ()=> (
 	  <Route exact path="/projects" component={Projects} />
 	  <Route exact path="/contact" component={Contact} />
 	  <Route exact path="/ppc" component={Ppc} />
-	  <Route exact path="/test-page" component={Test} />
+	  <Route exact path="/test" component={Test} />
 	  <Route exact path="/test/api" component={Api} />
 	  <Route exact path="/test/dropdown" component={Dropdown} />
 	  <Route exact path="/test/textfields" component={Textfields} />
 	  <Route exact path="/test/buttons" component={Buttons} />
 	  <Route exact path="/test/Login" component={Login} />
-	  <Route exact path="/test/slider" component={Sliders} />
+	  <Route exact path="/test/sliders" component={Sliders} />
 	</Switch>
 )
 
